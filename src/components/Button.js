@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { twMerge } from 'tailwind-merge'
 
-const Button = ({ variant, size, className }) => {
+const Button = ({ children, variant, size, className, onClick }) => {
   const defaultStyles =
     'w-[120px] h-[30px] text-base font-medium text-white bg-black border border-solid'
   const variantStyles = {
@@ -20,14 +20,17 @@ const Button = ({ variant, size, className }) => {
     sizeStyles[size] ? sizeStyles[size] : '',
     className
   )
-  return <div className={totalStyles}>Button</div>
+  return (
+    <button className={totalStyles} onClick={onClick}>
+      {children}
+    </button>
+  )
 }
 Button.propTypes = {
+  children: PropTypes.node.isRequired,
   variant: PropTypes.oneOf(['', 'primary', 'secondary', 'warning']),
   size: PropTypes.oneOf(['', 'lg', 'sm']),
-  isDisable: PropTypes.bool,
-  isHidden: PropTypes.bool,
-  color: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  onClick: PropTypes.func
 }
 export default Button
