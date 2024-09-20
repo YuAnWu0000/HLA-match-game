@@ -23,7 +23,7 @@ function App() {
           // ></div>
           <div
             key={`country_card_${item}`}
-            className="w-[14rem] h-[21rem] bg-contain bg-[url('/images/card/country_card_back6.png')]"
+            className="w-[14rem] h-[21rem] bg-contain bg-[url('/images/card/country_card_back.png')]"
           ></div>
         ))}
       </div>
