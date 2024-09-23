@@ -1,5 +1,5 @@
 function HLAMatching() {
-  return <></>
+  return <div className="w-full h-screen [perspective:1000px;]"></div>
 }
 
 export default HLAMatching
