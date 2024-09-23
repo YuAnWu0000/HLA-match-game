@@ -10,7 +10,7 @@ function HLAMatching() {
           content-center flex-wrap gap-8 [transform-style:preserve-3d;]
           [transform:rotateX(35deg);]"
       >
-        {[1, 2, 3, 4, 5].map((item) => (
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
           <div
             key={`dna_card_${item}`}
             className="w-[14rem] h-[21rem] bg-contain bg-[url('/images/card/dna_card_back.png')]"
