@@ -17,10 +17,6 @@ function CountrySelection() {
           [transform:rotateX(35deg);]"
       >
         {[1, 2, 3, 4, 5].map((item) => (
-          // <div
-          //   key={`dna_card_${item}`}
-          //   className="w-[14rem] h-[21rem] bg-contain bg-[url('/images/card/dna_card_back.png')]"
-          // ></div>
           <div
             key={`country_card_${item}`}
             className="w-[14rem] h-[21rem] bg-contain bg-[url('/images/card/country_card_back.png')]"
