@@ -13,10 +13,7 @@ function HLAMatching() {
           [transform:rotateX(35deg);]"
       >
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
-          <DNACard
-            key={`dna_card_${item}`}
-            className="w-[14rem] h-[21rem] bg-contain bg-[url('/images/card/dna_card_back.png')]"
-          />
+          <DNACard key={`dna_card_${item}`} />
         ))}
       </div>
     </div>
