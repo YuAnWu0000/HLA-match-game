@@ -1,8 +1,12 @@
 import CountrySelection from '@/pages/CountrySelection'
+import HLAMatching from '@/pages/HLAMatching'
 
 function App() {
   return (
-    <CountrySelection />
+    <>
+      {/* <CountrySelection /> */}
+      <HLAMatching />
+    </>
     // <div className="w-full h-screen [perspective:1000px;]">
     //   <div
     //     className="absolute top-0 right-0 -z-50 w-full h-screen bg-[length:140%_auto] bg-repeat
