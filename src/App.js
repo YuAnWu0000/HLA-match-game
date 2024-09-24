@@ -1,12 +1,14 @@
 import CountrySelection from '@/pages/CountrySelection'
 import HLAMatching from '@/pages/HLAMatching'
+import useGameStore from '@/store/game'
 
 function App() {
+  const { money, flow } = useGameStore()
   return (
-    <>
+    <div className="w-screen h-screen">
       {/* <CountrySelection /> */}
       <HLAMatching />
-    </>
+    </div>
     // <div className="w-full h-screen [perspective:1000px;]">
     //   <div
     //     className="absolute top-0 right-0 -z-50 w-full h-screen bg-[length:140%_auto] bg-repeat
