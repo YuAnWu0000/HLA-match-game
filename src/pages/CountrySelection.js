@@ -1,3 +1,5 @@
+import CountryCard from '@/components/CountryCard'
+
 function CountrySelection() {
   return (
     <div className="w-full h-screen [perspective:1000px;]">
@@ -17,10 +19,7 @@ function CountrySelection() {
           [transform:rotateX(35deg);]"
       >
         {[1, 2, 3, 4, 5].map((item) => (
-          <div
-            key={`country_card_${item}`}
-            className="w-[14rem] h-[21rem] bg-contain bg-[url('/images/card/country_card_back.png')]"
-          ></div>
+          <CountryCard key={`country_card_${item}`} />
         ))}
       </div>
     </div>
