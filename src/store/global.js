@@ -28,6 +28,7 @@ const useGlobalStore = create((set, get) => ({
   setDialogData: (data) => {
     get().setCustomDialog('', {})
     return set((state) => ({ dialogData: data }))
-  }
+  },
+  toggleDialog: () => set((state) => ({ isDialogOpen: !state.isDialogOpen }))
 }))
 export default useGlobalStore
