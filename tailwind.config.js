@@ -11,7 +11,11 @@ module.exports = {
       '4k': { min: '2601px', max: '4100px' },
       '2k': { min: '2000px', max: '2600px' },
       '2xl': { max: '1999px' },
-      xl: { max: '1279px' }
+      xl: { max: '1279px' },
+      lg: { max: '1023px' },
+      md: { max: '767px' },
+      sm: { max: '639px' },
+      xs: { max: '350px' }
     },
     extend: {
       colors: {
