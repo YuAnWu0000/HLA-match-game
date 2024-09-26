@@ -25,3 +25,21 @@ code {
     --ratio: 1;
   }
 }
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+    --ratio: 0.625;
+  }
+}
+@media (min-width: 2000px) {
+  html {
+    font-size: 25.6px;
+    --ratio: 1.6;
+  }
+}
+@media (min-width: 3500px) {
+  html {
+    font-size: 40px;
+    --ratio: 2.5;
+  }
+}
