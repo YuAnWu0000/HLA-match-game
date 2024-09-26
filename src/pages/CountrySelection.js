@@ -14,9 +14,9 @@ function CountrySelection() {
         alt=""
       /> */}
       <div
-        className="relative -translate-y-[2rem] w-[80rem] h-[52rem] mx-auto flex justify-center
-          content-center flex-wrap gap-8 [transform-style:preserve-3d;]
-          [transform:rotateX(35deg);]"
+        className="relative w-[80rem] h-[52rem] mx-auto flex justify-center content-center
+          flex-wrap gap-8 [transform-style:preserve-3d;]
+          [transform:rotateX(35deg)_translateY(-2rem);]"
       >
         {[1, 2, 3, 4, 5].map((item) => (
           <CountryCard key={`country_card_${item}`} />
