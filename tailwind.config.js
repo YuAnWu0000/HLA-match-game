@@ -45,7 +45,7 @@ module.exports = {
         },
         lightUp: {
           '0%': {
-            filter: 'brightness(50%)'
+            filter: 'brightness(75%)'
           },
           '100%': {
             filter: 'brightness(100%)'
@@ -56,7 +56,7 @@ module.exports = {
         bgZoomIn: '1.5s zoomIn 1s ease-in-out forwards',
         cardDrop: '0.2s drop var(--delayTime) ease-out forwards',
         cardScale: '1s scale 1s ease-out forwards',
-        openLight: '3s lightUp 5s ease-out forwards'
+        openLight: '1s lightUp 4s ease-out forwards'
       }
     }
   },
