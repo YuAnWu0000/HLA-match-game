@@ -46,7 +46,7 @@ module.exports = {
       },
       animation: {
         bgZoomIn: '1.5s zoomIn 1s ease-in-out forwards',
-        cardDrop: '2s drop 0s ease-out forwards',
+        cardDrop: '2s drop var(--delayTime) ease-out forwards',
         cardScale: '1s scale 1s ease-out forwards'
       }
     }
