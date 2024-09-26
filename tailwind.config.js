@@ -29,16 +29,16 @@ module.exports = {
         },
         drop: {
           '0%': {
-            transform: 'rotateX(0deg) translateY(-2rem)'
+            transform: 'rotateX(0deg) translateY(-15rem)'
           },
           '100%': {
-            transform: 'rotateX(35deg) translateY(-25rem)'
+            transform: 'rotateX(35deg) translateY(-2rem)'
           }
         }
       },
       animation: {
-        bgZoomIn: '5s zoomIn linear forwards',
-        cardDrop: '3s drop ease-out forwards'
+        bgZoomIn: '1.5s zoomIn 1s ease-in-out forwards',
+        cardDrop: '2s drop 0s ease-out forwards'
       }
     }
   },
