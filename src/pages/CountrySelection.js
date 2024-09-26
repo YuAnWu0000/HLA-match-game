@@ -18,7 +18,7 @@ function CountrySelection() {
           flex-wrap gap-8 [perspective:1000px;]"
       >
         {[1, 2, 3, 4, 5].map((item) => (
-          <CountryCard key={`country_card_${item}`} />
+          <CountryCard key={`country_card_${item}`} order={item} />
         ))}
       </div>
     </div>
