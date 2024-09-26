@@ -7,6 +7,9 @@ module.exports = {
       serif: ['Noto Sans TC', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
       body: ['Noto Sans TC', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
     },
+    screens: {
+      '4k': { min: '2601px', max: '4100px' }
+    },
     extend: {
       colors: {
         primary: '#2A2B2F',
