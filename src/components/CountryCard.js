@@ -7,7 +7,8 @@ function CountryCard({ order, className }) {
     <div
       className={twMerge(
         `w-[14rem] h-[21rem] bg-contain bg-[url('/images/card/country_card_back.png')]
-        [transform-style:preserve-3d;] animate-cardDrop [--delayTime:${order}s]`,
+        [transform-style:preserve-3d;] translate-y-[-30rem] animate-cardDrop
+        [--delayTime:${order}s]`,
         className
       )}
     ></div>
