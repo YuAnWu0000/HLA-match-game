@@ -15,7 +15,7 @@ function CountrySelection() {
       /> */}
       <div
         className="relative w-[80rem] h-[52rem] mx-auto flex justify-center content-center
-          flex-wrap gap-8 [perspective:1000px;]"
+          flex-wrap gap-8 [perspective:1000px;] animate-openLight brightness-50"
       >
         {[1, 2, 3, 4, 5].map((item) => (
           <CountryCard key={`country_card_${item}`} order={item} />
