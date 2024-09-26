@@ -26,10 +26,19 @@ module.exports = {
             'background-size': '140% auto',
             'background-position': 'center -20rem'
           }
+        },
+        drop: {
+          '0%': {
+            transform: 'rotateX(0deg) translateY(-2rem)'
+          },
+          '100%': {
+            transform: 'rotateX(35deg) translateY(-25rem)'
+          }
         }
       },
       animation: {
-        bgZoomIn: '5s zoomIn linear forwards'
+        bgZoomIn: '5s zoomIn linear forwards',
+        cardDrop: '3s drop ease-out forwards'
       }
     }
   },
