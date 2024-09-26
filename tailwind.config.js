@@ -29,7 +29,7 @@ module.exports = {
         },
         drop: {
           '0%': {
-            transform: 'rotateX(0deg) translateY(-30rem)'
+            transform: 'rotateX(0deg) translateY(-50rem)'
           },
           '100%': {
             transform: 'rotateX(35deg) translateY(-2rem)'
