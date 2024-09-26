@@ -34,11 +34,20 @@ module.exports = {
           '100%': {
             transform: 'rotateX(35deg) translateY(-2rem)'
           }
+        },
+        scale: {
+          '0%': {
+            transform: 'scale(0.7)'
+          },
+          '100%': {
+            transform: 'scale(1)'
+          }
         }
       },
       animation: {
         bgZoomIn: '1.5s zoomIn 1s ease-in-out forwards',
-        cardDrop: '2s drop 0s ease-out forwards'
+        cardDrop: '2s drop 0s ease-out forwards',
+        cardScale: '1s drop 1s ease-out forwards'
       }
     }
   },
