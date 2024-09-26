@@ -15,6 +15,21 @@ module.exports = {
         warning: '#f97316',
         info: '#575958',
         success: '#4ade80'
+      },
+      keyframes: {
+        zoomIn: {
+          '0%': {
+            'background-size': '100% auto',
+            'background-position': 'center 0rem'
+          },
+          '100%': {
+            'background-size': '140% auto',
+            'background-position': 'center -20rem'
+          }
+        }
+      },
+      animation: {
+        bgZoomIn: '5s zoomIn linear forwards'
       }
     }
   },
