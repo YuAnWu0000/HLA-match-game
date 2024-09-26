@@ -8,7 +8,8 @@ module.exports = {
       body: ['Noto Sans TC', 'Roboto', 'Helvetica', 'Arial', 'sans-serif']
     },
     screens: {
-      '4k': { min: '2601px', max: '4100px' }
+      '4k': { min: '2601px', max: '4100px' },
+      '2k': { min: '2000px', max: '2600px' }
     },
     extend: {
       colors: {
