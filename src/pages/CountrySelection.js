@@ -2,7 +2,7 @@ import CountryCard from '@/components/CountryCard'
 
 function CountrySelection() {
   return (
-    <div className="w-full h-full [perspective:1000px;] animate-openLight brightness-75">
+    <div className="w-full h-full [perspective:1000px;] animate-openLight brightness-[0.4]">
       <div
         className="absolute top-0 right-0 -z-50 w-full h-full bg-no-repeat bg-[length:100%_auto]
           bg-[center_0rem] bg-[url('/images/bg_country.jpg')] animate-bgZoomIn"
