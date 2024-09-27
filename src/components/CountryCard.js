@@ -14,12 +14,13 @@ function CountryCard({ order, className }) {
       {/* Card Back */}
       <div
         className="absolute top-0 right-0 w-full h-full bg-contain
-          bg-[url('/images/card/country_card_back.png')]"
+          bg-[url('/images/card/country_card_back.png')] [backface-visibility:hidden;]"
       ></div>
       {/* Card Front */}
       <div
         className="absolute top-0 right-0 w-full h-full bg-contain
-          bg-[url('/images/card/country_card_front.png')]"
+          bg-[url('/images/card/country_card_front.png')] [backface-visibility:hidden;]
+          [transform:rotate3d(0,1,0,180deg);]"
       ></div>
     </div>
   )
