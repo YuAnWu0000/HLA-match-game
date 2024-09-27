@@ -71,7 +71,8 @@ module.exports = {
         bgZoomIn: '1.5s zoomIn 1.5s ease-in-out forwards',
         cardDrop: '0.2s drop var(--delayTime) ease-out forwards',
         cardScale: '1s scale 1s ease-out forwards',
-        openLight: '1.5s lightUp 0.5s ease-out forwards'
+        openLight: '1.5s lightUp 0.5s ease-out forwards',
+        cardFlip: '0.5s flip ease-out forwards'
       }
     }
   },

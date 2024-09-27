@@ -1,8 +1,14 @@
 import PropTypes from 'prop-types'
+import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 function CountryCard({ order, className }) {
+  const [isCardOpen, setIsCardOpen] = useState()
   // [--delayTime:3s], [--delayTime:3.5s], [--delayTime:4s], [--delayTime:4.5s], [--delayTime:5s],
+  function cardBackClick() {
+    console.log('fuckkkk')
+    setIsCardOpen(true)
+  }
   return (
     <div
       className={twMerge(
@@ -11,17 +17,26 @@ function CountryCard({ order, className }) {
         className
       )}
     >
-      {/* Card Back */}
       <div
-        className="absolute top-0 right-0 w-full h-full bg-contain
-          bg-[url('/images/card/country_card_back.png')] [backface-visibility:hidden;]"
-      ></div>
-      {/* Card Front */}
-      <div
-        className="absolute top-0 right-0 w-full h-full bg-contain
-          bg-[url('/images/card/country_card_front.png')] [backface-visibility:hidden;]
-          [transform:rotate3d(0,1,0,180deg);]"
-      ></div>
+        className={twMerge(
+          'w-full h-full [transform-style:preserve-3d;]',
+          isCardOpen && 'animate-cardFlip'
+        )}
+      >
+        {/* Card Back */}
+        <div
+          className="absolute top-0 right-0 w-full h-full bg-contain
+            bg-[url('/images/card/country_card_back.png')] [backface-visibility:hidden;]"
+          onClick={cardBackClick}
+        ></div>
+        {/* Card Front */}
+        <div
+          className="absolute top-0 right-0 w-full h-full bg-contain
+            bg-[url('/images/card/country_card_front_frame.jpg')]
+            [backface-visibility:hidden;] [transform:rotate3d(0,1,0,180deg);]"
+          onClick={() => setIsCardOpen(false)}
+        ></div>
+      </div>
     </div>
   )
 }
