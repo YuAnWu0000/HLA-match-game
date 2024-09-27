@@ -60,6 +60,11 @@ module.exports = {
           '100%': {
             filter: 'brightness(100%)'
           }
+        },
+        flip: {
+          '100%': {
+            transform: 'rotate3d(0, 1, 0, 180deg)'
+          }
         }
       },
       animation: {
