@@ -3,11 +3,11 @@ import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 const COUNTRY_MAP = {
-  1: 'USA',
-  2: 'UK',
-  3: 'JP',
-  4: 'CN',
-  5: 'TW'
+  1: { name: '美國', cost: 100, image: '/images/card/USA_flag.jpg' },
+  2: { name: '英國', cost: 200, image: '/images/card/UK_flag.jpg' },
+  3: { name: '日本', cost: 300, image: '/images/card/JP_flag.jpg' },
+  4: { name: '中國', cost: 400, image: '/images/card/CN_flag.jpg' },
+  5: { name: '台灣', cost: 500, image: '/images/card/TW_flag.jpg' }
 }
 function CountryCard({ order, className }) {
   const [isCardOpen, setIsCardOpen] = useState()
@@ -43,10 +43,20 @@ function CountryCard({ order, className }) {
           onClick={() => setIsCardOpen(false)}
         >
           <img
-            src={`/images/card/${COUNTRY_MAP[order]}_flag.jpg`}
+            src={COUNTRY_MAP[order].image}
             alt=""
-            className="absolute top-[2rem] w-[80%] h-auto mx-auto"
+            className="relative top-[2.1rem] w-[75%] h-auto mx-auto rounded-md"
           />
+          <div className="relative top-[3.8rem] mx-auto text-center">
+            <p className="text-primary font-bold text-2xl">
+              {COUNTRY_MAP[order].name}
+            </p>
+          </div>
+          <div className="relative top-[7rem] mx-auto text-center">
+            <p className="text-primary font-bold text-xl">
+              費用: {COUNTRY_MAP[order].cost}
+            </p>
+          </div>
         </div>
       </div>
     </div>
