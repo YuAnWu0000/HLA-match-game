@@ -6,7 +6,6 @@ function CountryCard({ order, className }) {
   const [isCardOpen, setIsCardOpen] = useState()
   // [--delayTime:3s], [--delayTime:3.5s], [--delayTime:4s], [--delayTime:4.5s], [--delayTime:5s],
   function cardBackClick() {
-    console.log('fuckkkk')
     setIsCardOpen(true)
   }
   return (
