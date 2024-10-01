@@ -31,8 +31,8 @@ function CountryCard({ order, className }) {
         {/* Card Front */}
         <div
           className="absolute top-0 right-0 w-full h-full bg-contain
-            bg-[url('/images/card/country_card_front_frame.jpg')]
-            [backface-visibility:hidden;] [transform:rotate3d(0,1,0,180deg);]"
+            bg-[url('/images/card/country_card_front.png')] [backface-visibility:hidden;]
+            [transform:rotate3d(0,1,0,180deg);]"
           onClick={() => setIsCardOpen(false)}
         ></div>
       </div>
