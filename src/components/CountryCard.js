@@ -2,6 +2,13 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
+const COUNTRY_MAP = {
+  1: 'USA',
+  2: 'UK',
+  3: 'JP',
+  4: 'CN',
+  5: 'TW'
+}
 function CountryCard({ order, className }) {
   const [isCardOpen, setIsCardOpen] = useState()
   // [--delayTime:3s], [--delayTime:3.5s], [--delayTime:4s], [--delayTime:4.5s], [--delayTime:5s],
@@ -34,7 +41,13 @@ function CountryCard({ order, className }) {
             bg-[url('/images/card/country_card_front.png')] [backface-visibility:hidden;]
             [transform:rotate3d(0,1,0,180deg);]"
           onClick={() => setIsCardOpen(false)}
-        ></div>
+        >
+          <img
+            src={`/images/card/${COUNTRY_MAP[order]}_flag.jpg`}
+            alt=""
+            className="absolute top-[2rem] w-[80%] h-auto mx-auto"
+          />
+        </div>
       </div>
     </div>
   )
