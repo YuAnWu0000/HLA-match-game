@@ -1,5 +1,22 @@
 import CountryCard from '@/components/CountryCard'
 
+function CountryResult() {
+  return (
+    <div
+      className="fixed top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.7)] flex items-center
+        justify-center"
+    >
+      <h1 className="absolute top-[12%] text-secondary font-bold text-3xl">
+        選擇結果：美國
+      </h1>
+      <CountryCard
+        order={1}
+        className="w-[26rem] h-[39rem] transform-none animate-none"
+      />
+    </div>
+  )
+}
+
 function CountrySelection() {
   return (
     <div className="w-full h-full [perspective:1000px;] animate-openLight brightness-[0.4]">
@@ -21,6 +38,7 @@ function CountrySelection() {
           <CountryCard key={`country_card_${item}`} order={item} />
         ))}
       </div>
+      <CountryResult />
     </div>
   )
 }

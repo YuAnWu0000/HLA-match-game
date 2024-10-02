@@ -53,11 +53,13 @@ function CountryCard({ order, className }) {
             alt=""
             className="absolute top-0 right-0 w-full h-full"
           />
+          {/* Country name */}
           <div className="absolute top-[46.5%] w-full text-center">
             <p className="text-primary font-bold text-2xl">
               {COUNTRY_MAP[order].name}
             </p>
           </div>
+          {/* Country cost */}
           <div
             className="absolute right-1/2 bottom-[8%] translate-x-1/2 w-[75%] h-[33%] flex items-center
               justify-center"
@@ -74,6 +76,7 @@ function CountryCard({ order, className }) {
 
 CountryCard.propTypes = {
   order: PropTypes.number.isRequired,
+  size: PropTypes.string,
   className: PropTypes.string
 }
 export default CountryCard
