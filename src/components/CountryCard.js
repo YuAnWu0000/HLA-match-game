@@ -45,7 +45,7 @@ function CountryCard({ order, className }) {
           <img
             src={COUNTRY_MAP[order].image}
             alt=""
-            className="relative top-[1.7rem] w-[90%] h-auto mx-auto rounded-md"
+            className="relative top-[8%] w-[90%] h-auto mx-auto rounded-md"
           />
           {/* Card frame */}
           <img
