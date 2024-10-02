@@ -11,7 +11,8 @@ function CountryResult() {
       </h1>
       <CountryCard
         order={1}
-        className="w-[26rem] h-[39rem] transform-none animate-none"
+        size="xl"
+        className="transform-none animate-none"
       />
     </div>
   )

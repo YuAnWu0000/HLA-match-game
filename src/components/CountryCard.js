@@ -9,7 +9,7 @@ const COUNTRY_MAP = {
   4: { name: '中國', cost: 400, image: '/images/card/CN_flag.jpg' },
   5: { name: '台灣', cost: 500, image: '/images/card/TW_flag.jpg' }
 }
-function CountryCard({ order, className }) {
+function CountryCard({ order, size, className }) {
   const [isCardOpen, setIsCardOpen] = useState()
   // [--delayTime:3s], [--delayTime:3.5s], [--delayTime:4s], [--delayTime:4.5s], [--delayTime:5s],
   function cardBackClick() {
@@ -20,6 +20,7 @@ function CountryCard({ order, className }) {
       className={twMerge(
         `w-[14rem] h-[21rem] [transform-style:preserve-3d;] translate-y-[-50rem]
         animate-cardDrop [--delayTime:${3 + (order - 1) * 0.5}s]`,
+        size === 'xl' && 'w-[26rem] h-[39rem]',
         className
       )}
     >
@@ -55,7 +56,12 @@ function CountryCard({ order, className }) {
           />
           {/* Country name */}
           <div className="absolute top-[46.5%] w-full text-center">
-            <p className="text-primary font-bold text-2xl">
+            <p
+              className={twMerge(
+                'text-primary font-bold text-2xl',
+                size === 'xl' && 'text-3xl'
+              )}
+            >
               {COUNTRY_MAP[order].name}
             </p>
           </div>
