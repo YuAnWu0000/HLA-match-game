@@ -37,22 +37,31 @@ function CountryCard({ order, className }) {
         ></div>
         {/* Card Front */}
         <div
-          className="absolute top-0 right-0 w-full h-full bg-contain
-            bg-[url('/images/card/country_card_front.png')] [backface-visibility:hidden;]
+          className="absolute top-0 right-0 w-full h-full [backface-visibility:hidden;]
             [transform:rotate3d(0,1,0,180deg);]"
           onClick={() => setIsCardOpen(false)}
         >
+          {/* Country flag */}
           <img
             src={COUNTRY_MAP[order].image}
             alt=""
-            className="relative top-[2.1rem] w-[75%] h-auto mx-auto rounded-md"
+            className="relative top-[1.7rem] w-[90%] h-auto mx-auto rounded-md"
           />
-          <div className="relative top-[3.8rem] mx-auto text-center">
+          {/* Card frame */}
+          <img
+            src="/images/card/country_card_front.png"
+            alt=""
+            className="absolute top-0 right-0 w-full h-full"
+          />
+          <div className="absolute top-[46.5%] w-full text-center">
             <p className="text-primary font-bold text-2xl">
               {COUNTRY_MAP[order].name}
             </p>
           </div>
-          <div className="relative top-[7rem] mx-auto text-center">
+          <div
+            className="absolute right-1/2 bottom-[1.5rem] translate-x-1/2 w-[80%] h-[35%] flex
+              items-center justify-center"
+          >
             <p className="text-primary font-bold text-xl">
               費用: {COUNTRY_MAP[order].cost}
             </p>

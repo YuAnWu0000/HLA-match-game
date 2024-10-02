@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": true,
   "css.lint.unknownAtRules": "ignore",
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "nuxt.isNuxtApp": false
 }
