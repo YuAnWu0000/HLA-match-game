@@ -59,8 +59,8 @@ function CountryCard({ order, className }) {
             </p>
           </div>
           <div
-            className="absolute right-1/2 bottom-[1.5rem] translate-x-1/2 w-[80%] h-[35%] flex
-              items-center justify-center"
+            className="absolute right-1/2 bottom-[8%] translate-x-1/2 w-[75%] h-[33%] flex items-center
+              justify-center"
           >
             <p className="text-primary font-bold text-xl">
               費用: {COUNTRY_MAP[order].cost}
