@@ -6,14 +6,17 @@ function CountryResult() {
       className="fixed top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.7)] flex items-center
         justify-center"
     >
-      <h1 className="absolute top-[12%] text-secondary font-bold text-3xl">
-        選擇結果：美國
+      <h1 className="absolute top-[10%] text-secondary font-bold text-[2.3rem]">
+        抽選結果:
       </h1>
       <CountryCard
         order={1}
         size="xl"
         className="transform-none animate-none"
       />
+      <h1 className="absolute bottom-[10%] text-secondary font-bold text-[2.3rem]">
+        已扣除費用 50000 元
+      </h1>
     </div>
   )
 }
@@ -39,7 +42,7 @@ function CountrySelection() {
           <CountryCard key={`country_card_${item}`} order={item} />
         ))}
       </div>
-      <CountryResult />
+      {/* <CountryResult /> */}
     </div>
   )
 }
