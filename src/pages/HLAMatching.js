@@ -13,7 +13,7 @@ function HLAMatching() {
           [transform:rotateX(35deg);]"
       >
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
-          <DNACard key={`dna_card_${item}`} />
+          <DNACard key={`dna_card_${item}`} order={item} />
         ))}
       </div>
     </div>
