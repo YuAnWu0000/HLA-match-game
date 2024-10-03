@@ -14,7 +14,7 @@ function CountryResult() {
         size="xl"
         className="transform-none animate-none"
       />
-      <h1 className="absolute bottom-[10%] text-secondary font-bold text-[2.3rem]">
+      <h1 className="absolute bottom-[9%] text-secondary font-bold text-[2.3rem]">
         已扣除費用 50000 元
       </h1>
     </div>
