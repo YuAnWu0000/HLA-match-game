@@ -56,7 +56,7 @@ function CountryCard({ order, size, className }) {
           />
           {/* Country name */}
           <div
-            className={`absolute ${size === 'xl' ? 'top-[47.5%]' : 'top-[46.5%]'} w-full text-center`}
+            className={`absolute ${size === 'xl' ? 'top-[47.5%]' : 'top-[45.5%]'} w-full text-center`}
           >
             <p
               className={`text-primary font-bold ${size === 'xl' ? 'text-3xl' : 'text-2xl'}`}
