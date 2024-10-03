@@ -15,6 +15,7 @@ function CountryCard({ order, size, className }) {
   function cardBackClick() {
     setIsCardOpen(true)
   }
+
   return (
     <div
       className={twMerge(
