@@ -57,9 +57,10 @@ function CountrySelection() {
         alt=""
       /> */}
       <BuddhistLifes />
+      {/* Card wrapper */}
       <div
-        className="relative w-[80rem] h-[52rem] mx-auto flex justify-center content-center
-          flex-wrap gap-8 [perspective:1000px;]"
+        className="relative top-[14rem] w-full h-fit flex justify-center content-center flex-wrap
+          gap-[2.6rem] [perspective:1000px;]"
       >
         {[1, 2, 3, 4, 5].map((item) => (
           <CountryCard key={`country_card_${item}`} order={item} />
@@ -75,7 +76,8 @@ function CountrySelection() {
           希望在哪裡？
         </h3>
         <p className="font-semibold text-3xl [text-shadow:1px_1px_0px_#BFBFBF] p-2 tracking-widest">
-          在世界各地尋找捐贈者，將根據所尋找到的國家，支付尋找捐贈者及確認HLA的費用。
+          在世界各地尋找捐贈者，將根據所尋找到的國家，支付尋找捐贈者及確認HLA的費用
+          (請點選一張牌)。
         </p>
       </div>
       {/* <CountryResult /> */}
