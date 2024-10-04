@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
+import useGameStore from '@/store/game'
 
 const COUNTRY_MAP = {
   1: { name: '美國', cost: 50000, image: '/images/card/USA_flag.jpg' },
@@ -11,6 +12,7 @@ const COUNTRY_MAP = {
 }
 function CountryCard({ order, size, className }) {
   const [isCardOpen, setIsCardOpen] = useState()
+  const { buddhistLifesRemain } = useGameStore()
   // [--delayTime:3s], [--delayTime:3.5s], [--delayTime:4s], [--delayTime:4.5s], [--delayTime:5s],
   function cardBackClick() {
     setIsCardOpen(true)
@@ -19,7 +21,7 @@ function CountryCard({ order, size, className }) {
   return (
     <div
       className={twMerge(
-        `w-[14rem] h-[21rem] [transform-style:preserve-3d;] translate-y-[-50rem]
+        `w-[16rem] h-[24rem] [transform-style:preserve-3d;] translate-y-[-50rem]
         animate-cardDrop [--delayTime:${3 + (order - 1) * 0.5}s]`,
         size === 'xl' && 'w-[26rem] h-[39rem]',
         className
@@ -40,7 +42,7 @@ function CountryCard({ order, size, className }) {
         {/* Card Front */}
         <div
           className="absolute top-0 right-0 w-full h-full [backface-visibility:hidden;]
-            [transform:rotate3d(0,1,0,180deg);] rounded-[1.25rem] overflow-hidden"
+            [transform:rotate3d(0,1,0,180deg);] rounded-[0.75rem] overflow-hidden"
           onClick={() => setIsCardOpen(false)}
         >
           {/* Country flag */}
@@ -57,7 +59,7 @@ function CountryCard({ order, size, className }) {
           />
           {/* Country name */}
           <div
-            className={`absolute ${size === 'xl' ? 'top-[47.5%]' : 'top-[45.5%]'} w-full text-center`}
+            className={`absolute ${size === 'xl' ? 'top-[47.5%]' : 'top-[46%]'} w-full text-center`}
           >
             <p
               className={`text-primary font-bold ${size === 'xl' ? 'text-3xl' : 'text-2xl'}`}
@@ -67,14 +69,24 @@ function CountryCard({ order, size, className }) {
           </div>
           {/* Country cost */}
           <div
-            className="absolute right-1/2 bottom-[8%] translate-x-1/2 w-[75%] h-[33%] flex items-center
-              justify-center"
+            className={twMerge(
+              `absolute right-1/2 bottom-[8%] translate-x-1/2 w-[77%] h-[33%] flex items-center
+              justify-center px-4`,
+              order === 5 && 'flex-col'
+            )}
           >
             <p
               className={`text-primary font-bold ${size === 'xl' ? 'text-2xl' : 'text-xl'}`}
             >
               費用: {COUNTRY_MAP[order].cost}
             </p>
+            {order === 5 && (
+              <p
+                className={`text-primary font-semibold ${size === 'xl' ? 'text-lg' : 'text-md'}`}
+              >
+                (前5次配對費用為慈濟補助，還剩餘{buddhistLifesRemain}次。)
+              </p>
+            )}
           </div>
         </div>
       </div>

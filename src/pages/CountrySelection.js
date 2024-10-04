@@ -1,4 +1,26 @@
+import { twMerge } from 'tailwind-merge'
 import CountryCard from '@/components/CountryCard'
+import useGameStore from '@/store/game'
+
+function BuddhistLifes() {
+  const { buddhistLifesRemain } = useGameStore()
+  return (
+    <div
+      className="absolute top-0 right-0 flex items-center justify-center gap-2
+        bg-[rgba(255,255,255,0.2)] rounded-lg p-1"
+    >
+      {[1, 2, 3, 4, 5].map((item) => (
+        <div
+          key={`buddhist${item}`}
+          className={twMerge(
+            "w-16 h-12 bg-[url('/images/buddhist_logo.png')] bg-cover",
+            item > buddhistLifesRemain && 'brightness-50'
+          )}
+        ></div>
+      ))}
+    </div>
+  )
+}
 
 function CountryResult() {
   return (
@@ -7,15 +29,15 @@ function CountryResult() {
         justify-center"
     >
       <h1 className="absolute top-[10%] text-secondary font-bold text-[2.3rem]">
-        抽選結果:
+        尋找結果:
       </h1>
       <CountryCard
         order={1}
         size="xl"
         className="transform-none animate-none"
       />
-      <h1 className="absolute bottom-[9%] text-secondary font-bold text-[2.3rem]">
-        已扣除費用 50000 元
+      <h1 className="absolute bottom-[10%] text-secondary font-bold text-[2.3rem]">
+        已扣除費用 50000 元 (前5次配對費用為慈濟補助，還剩餘4次)
       </h1>
     </div>
   )
@@ -24,6 +46,7 @@ function CountryResult() {
 function CountrySelection() {
   return (
     <div className="w-full h-full [perspective:1000px;] animate-openLight brightness-[0.4]">
+      {/* Table background */}
       <div
         className="absolute top-0 right-0 -z-50 w-full h-full bg-repeat bg-[length:100%_auto]
           bg-[center_0rem] bg-[url('/images/bg_country.jpg')] animate-bgZoomIn"
@@ -34,13 +57,29 @@ function CountrySelection() {
           [transform:rotateX(-60deg);]"
         alt=""
       /> */}
+      <BuddhistLifes />
+      {/* Card wrapper */}
       <div
-        className="relative w-[80rem] h-[52rem] mx-auto flex justify-center content-center
-          flex-wrap gap-8 [perspective:1000px;]"
+        className="relative top-[14rem] w-full h-fit flex justify-center content-center flex-wrap
+          gap-[2.6rem] [perspective:1000px;]"
       >
         {[1, 2, 3, 4, 5].map((item) => (
           <CountryCard key={`country_card_${item}`} order={item} />
         ))}
+      </div>
+      {/* Story text */}
+      <div className="w-full h-[12rem] fixed bottom-0 bg-[rgba(255,255,255,0.4)] border border-white">
+        <h3
+          className="w-full h-[4.5rem] leading-[4.5rem] tracking-wide
+            bg-[linear-gradient(to_right,_rgba(255,255,255,0.5),_rgba(255,255,255,0.1))]
+            text-yellow-300 font-[900] text-4xl px-2 [text-shadow:1px_1px_0px_#424242]"
+        >
+          希望在哪裡？
+        </h3>
+        <p className="font-semibold text-3xl [text-shadow:1px_1px_0px_#BFBFBF] p-2 tracking-widest">
+          在世界各地尋找捐贈者，將根據所尋找到的國家，支付尋找捐贈者及確認HLA的費用
+          (請點選一張牌)。
+        </p>
       </div>
       {/* <CountryResult /> */}
     </div>
