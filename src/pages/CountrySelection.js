@@ -42,6 +42,11 @@ function CountrySelection() {
           <CountryCard key={`country_card_${item}`} order={item} />
         ))}
       </div>
+      {/* Story text */}
+      <div className="bg-[rgba(255,255,255,0.3)] border border-white">
+        <h3 className="text-primary font-bold text-lg">希望在哪裡？</h3>
+        <p>在世界各地尋找捐贈者，將根據所尋找到的國家</p>
+      </div>
       {/* <CountryResult /> */}
     </div>
   )
