@@ -7,7 +7,7 @@ function CountryResult() {
         justify-center"
     >
       <h1 className="absolute top-[10%] text-secondary font-bold text-[2.3rem]">
-        抽選結果:
+        尋找結果:
       </h1>
       <CountryCard
         order={1}
@@ -43,9 +43,17 @@ function CountrySelection() {
         ))}
       </div>
       {/* Story text */}
-      <div className="bg-[rgba(255,255,255,0.3)] border border-white">
-        <h3 className="text-primary font-bold text-lg">希望在哪裡？</h3>
-        <p>在世界各地尋找捐贈者，將根據所尋找到的國家</p>
+      <div className="w-full h-[12rem] fixed bottom-0 bg-[rgba(255,255,255,0.4)] border border-white">
+        <h3
+          className="w-full h-[4.5rem] leading-[4.5rem] tracking-wide
+            bg-[linear-gradient(to_right,_rgba(255,255,255,0.5),_rgba(255,255,255,0.1))]
+            text-yellow-300 font-[900] text-4xl px-2 [text-shadow:1px_1px_0px_#424242]"
+        >
+          希望在哪裡？
+        </h3>
+        <p className="font-semibold text-3xl [text-shadow:1px_1px_0px_#BFBFBF] p-2 tracking-widest">
+          在世界各地尋找捐贈者，將根據所尋找到的國家，支付尋找捐贈者及確認HLA的費用。
+        </p>
       </div>
       {/* <CountryResult /> */}
     </div>
