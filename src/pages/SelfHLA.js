@@ -53,7 +53,7 @@ function HLASelf() {
         <h3
           className="w-full h-[4.5rem] leading-[4.5rem] tracking-wide
             bg-[linear-gradient(to_right,_rgba(255,255,255,0.5),_rgba(255,255,255,0.1))]
-            text-yellow-300 font-[900] text-4xl px-2 [text-shadow:1px_1px_0px_#424242]"
+            text-emerald-600 font-[900] text-4xl px-2 [text-shadow:1px_1px_0px_#ffffff]"
         >
           基因測試
         </h3>
@@ -64,7 +64,7 @@ function HLASelf() {
       {/* Next step */}
       <div
         className="group absolute right-[1rem] bottom-[1.5rem] flex items-center cursor-pointer
-          text-secondary hover:text-indigo-700"
+          text-[#694949] hover:text-indigo-700"
         onClick={() => setGameFlow('COUNTRY_SELECTION')}
       >
         <h3
@@ -73,7 +73,10 @@ function HLASelf() {
         >
           下一步
         </h3>
-        <ChevronRightIcon className="w-8 h-8 text-inherit ml-1 mt-1.5" />
+        <ChevronRightIcon
+          strokeWidth={2}
+          className="w-8 h-8 text-inherit ml-1 mt-1.5"
+        />
       </div>
     </div>
   )

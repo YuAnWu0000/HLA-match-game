@@ -43,16 +43,16 @@ function CountryResult({ setIsShow }) {
       {/* Next step */}
       <div
         className="group absolute right-[1rem] bottom-[1rem] flex items-center cursor-pointer
-          text-secondary hover:text-indigo-700"
+          text-secondary hover:text-yellow-400"
         onClick={() => setIsShow(false)}
       >
         <h3
-          className="text-inherit font-semibold text-[1.8rem] group-hover:border-b
-            group-hover:border-indigo-700"
+          className="text-inherit font-semibold text-[1.8rem] group-hover:border-b-2
+            group-hover:border-yellow-400"
         >
           下一步
         </h3>
-        <ChevronRightIcon className="w-10 h-10 text-inherit" />
+        <ChevronRightIcon className="w-9 h-9 text-inherit ml-1 mt-1.5" />
       </div>
     </div>
   )
