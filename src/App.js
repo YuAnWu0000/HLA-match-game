@@ -2,6 +2,7 @@ import CountrySelection from '@/pages/CountrySelection'
 import HLAMatching from '@/pages/HLAMatching'
 import useGameStore from '@/store/game'
 import { formatAmount } from '@/utils/format'
+import BuddhistLifes from '@/components/BuddhistLifes'
 
 const GAME_FLOW_COMPONENT_MAPPING = {
   COUNTRY_SELECTION: <CountrySelection />,
@@ -23,6 +24,8 @@ function App() {
           {formatAmount(money)}
         </h3>
       </div>
+      {/* Buddhist lifes */}
+      <BuddhistLifes />
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import CountryCard from '@/components/CountryCard'
-import BuddhistLifes from '@/components/BuddhistLifes'
 
 function CountryResult() {
   return (
@@ -36,7 +35,6 @@ function CountrySelection() {
           [transform:rotateX(-60deg);]"
         alt=""
       /> */}
-      <BuddhistLifes />
       {/* Card wrapper */}
       <div
         className="relative top-[14rem] w-full h-fit flex justify-center content-center flex-wrap
