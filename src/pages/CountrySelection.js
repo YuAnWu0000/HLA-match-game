@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import CountryCard from '@/components/CountryCard'
+import useGameStore from '@/store/game'
+import { COUNTRY_MAP, CountryCard } from '@/components/CountryCard'
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
 
 function CountryResult({ setIsShow }) {
+  const { selectedCountryId, buddhistLifesRemain } = useGameStore()
   return (
     <div
       className="fixed top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.8)] flex items-center
@@ -15,12 +17,28 @@ function CountryResult({ setIsShow }) {
       <CountryCard
         order={1}
         defaultOpen={true}
+        defaultId={selectedCountryId}
         size="xl"
         className="transform-none animate-none"
       />
-      <h1 className="absolute bottom-[5%] text-secondary font-bold text-[2.3rem]">
-        已扣除費用 50000 元 (前5次配對費用為慈濟補助，還剩餘4次)
-      </h1>
+      {selectedCountryId === 5 && buddhistLifesRemain > 0 ? (
+        <h1 className="absolute bottom-[5%] text-secondary font-bold text-[2.3rem]">
+          將扣除慈濟補助一次 (無須扣除金錢)
+        </h1>
+      ) : (
+        <h1 className="absolute bottom-[5%] text-secondary font-bold text-[2.3rem]">
+          將扣除檢驗費用
+          <span
+            className="[background-clip:text]
+              bg-[linear-gradient(to_top_right,_#f0f4c3,_#e6ee9c,_#f9fbe7,_#e6ee9c,_#f9fbe7,_#e6ee9c)]
+              text-[2.2rem] text-transparent font-bold mx-2"
+          >
+            {COUNTRY_MAP[selectedCountryId].cost}
+          </span>
+          元
+        </h1>
+      )}
+
       <div
         className="absolute right-[1rem] bottom-[1rem] flex items-center cursor-pointer
           text-secondary hover:text-yellow-200"
