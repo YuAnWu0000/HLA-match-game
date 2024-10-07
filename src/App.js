@@ -1,4 +1,4 @@
-import HLASelf from '@/pages/HLASelf'
+import SelfHLA from '@/pages/SelfHLA'
 import CountrySelection from '@/pages/CountrySelection'
 import HLAMatching from '@/pages/HLAMatching'
 import useGameStore from '@/store/game'
@@ -6,7 +6,7 @@ import { formatAmount } from '@/utils/format'
 import BuddhistLifes from '@/components/BuddhistLifes'
 
 const GAME_FLOW_COMPONENT_MAPPING = {
-  SELF_HLA: <HLASelf />,
+  SELF_HLA: <SelfHLA />,
   COUNTRY_SELECTION: <CountrySelection />,
   HLA_MATCHING: <HLAMatching />
 }

@@ -11,9 +11,11 @@ function CountryResult({ setIsShow }) {
       className="fixed top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.8)] flex items-center
         justify-center"
     >
+      {/* Title */}
       <h1 className="absolute top-[5%] text-secondary font-bold text-[2.3rem]">
         尋找結果:
       </h1>
+      {/* Result */}
       <CountryCard
         order={1}
         defaultOpen={true}
@@ -38,10 +40,10 @@ function CountryResult({ setIsShow }) {
           元
         </h1>
       )}
-
+      {/* Next step */}
       <div
         className="absolute right-[1rem] bottom-[1rem] flex items-center cursor-pointer
-          text-secondary hover:text-yellow-200"
+          text-secondary hover:text-indigo-700 hover:border-b hover:border-indigo-700"
         onClick={() => setIsShow(false)}
       >
         <h3 className="text-inherit font-semibold text-[1.8rem]">下一步</h3>
