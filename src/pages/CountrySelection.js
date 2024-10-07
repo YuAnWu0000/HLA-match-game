@@ -90,8 +90,8 @@ function CountrySelection() {
           希望在哪裡？
         </h3>
         <p className="font-semibold text-3xl [text-shadow:1px_1px_0px_#BFBFBF] p-2 tracking-widest">
-          在世界各地尋找捐贈者，將根據所尋找到的國家，支付尋找捐贈者及確認HLA的費用
-          (請點選一張牌)。
+          身為白血病患者，你必須在世界各地尋找骨隨捐贈者，將根據所尋找到的國家，支付相對應的的費用
+          (請點選一張國家牌)。
         </p>
       </div>
       {showResult && <CountryResult setIsShow={setShowResult} />}

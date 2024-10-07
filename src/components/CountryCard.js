@@ -22,8 +22,13 @@ export function CountryCard({
   const [countryId, setCountryId] = useState(defaultId)
   const { buddhistLifesRemain, setSelectedCountryId } = useGameStore()
   // [--delayTime:3s], [--delayTime:3.5s], [--delayTime:4s], [--delayTime:4.5s], [--delayTime:5s],
+
+  function getRandomNumber(range) {
+    return Math.floor(Math.random() * range) + 1
+  }
+
   function cardBackClick() {
-    const id = Math.ceil(Math.random() * 5)
+    const id = getRandomNumber(5)
     setCountryId(id)
     setSelectedCountryId(id)
     setIsCardOpen(true)
