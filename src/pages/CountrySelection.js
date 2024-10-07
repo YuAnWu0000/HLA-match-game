@@ -1,12 +1,13 @@
 import CountryCard from '@/components/CountryCard'
+import { ChevronRightIcon } from '@heroicons/react/24/outline'
 
 function CountryResult() {
   return (
     <div
-      className="fixed top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.7)] flex items-center
+      className="fixed top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.8)] flex items-center
         justify-center"
     >
-      <h1 className="absolute top-[10%] text-secondary font-bold text-[2.3rem]">
+      <h1 className="absolute top-[5%] text-secondary font-bold text-[2.3rem]">
         尋找結果:
       </h1>
       <CountryCard
@@ -14,9 +15,16 @@ function CountryResult() {
         size="xl"
         className="transform-none animate-none"
       />
-      <h1 className="absolute bottom-[10%] text-secondary font-bold text-[2.3rem]">
+      <h1 className="absolute bottom-[5%] text-secondary font-bold text-[2.3rem]">
         已扣除費用 50000 元 (前5次配對費用為慈濟補助，還剩餘4次)
       </h1>
+      <div
+        className="absolute right-[1rem] bottom-[1rem] flex items-center cursor-pointer
+          text-secondary hover:text-yellow-200"
+      >
+        <h3 className="text-inherit font-semibold text-[1.8rem]">下一步</h3>
+        <ChevronRightIcon className="w-10 h-10 text-inherit" />
+      </div>
     </div>
   )
 }
@@ -27,7 +35,8 @@ function CountrySelection() {
       {/* Table background */}
       <div
         className="absolute top-0 right-0 -z-50 w-full h-full bg-repeat bg-[length:100%_auto]
-          bg-[center_0rem] bg-[url('/images/bg_country.jpg')] animate-bgZoomIn"
+          bg-[center_0rem] bg-[url('/images/bg_country.jpg')] animate-bgZoomIn
+          animate-none"
       ></div>
       {/* <img
         src="/images/bg_0.jpg"
@@ -58,7 +67,7 @@ function CountrySelection() {
           (請點選一張牌)。
         </p>
       </div>
-      {/* <CountryResult /> */}
+      <CountryResult />
     </div>
   )
 }
