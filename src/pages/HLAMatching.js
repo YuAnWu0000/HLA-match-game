@@ -3,6 +3,7 @@ import DNACard from '@/components/DNACard'
 function HLAMatching() {
   return (
     <div className="w-full h-full [perspective:1000px;]">
+      {/* Background */}
       <div
         className="absolute top-0 right-0 -z-50 w-full h-full bg-repeat bg-[length:140%_auto]
           bg-[center_-25rem] bg-[url('/images/bg_dna.jpg')]"
