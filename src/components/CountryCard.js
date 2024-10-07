@@ -10,19 +10,30 @@ const COUNTRY_MAP = {
   4: { name: '中國', cost: 30000, image: '/images/card/CN_flag.jpg' },
   5: { name: '台灣', cost: 10000, image: '/images/card/TW_flag.jpg' }
 }
-function CountryCard({ order, size, className }) {
-  const [isCardOpen, setIsCardOpen] = useState()
+function CountryCard({
+  order,
+  defaultOpen = false,
+  size,
+  showResult,
+  className
+}) {
+  const [isCardOpen, setIsCardOpen] = useState(defaultOpen)
   const { buddhistLifesRemain } = useGameStore()
   // [--delayTime:3s], [--delayTime:3.5s], [--delayTime:4s], [--delayTime:4.5s], [--delayTime:5s],
   function cardBackClick() {
     setIsCardOpen(true)
+    // 預留翻開卡片的動畫時間
+    setTimeout(() => {
+      showResult(true)
+    }, 1000)
   }
 
   return (
     <div
       className={twMerge(
         `w-[16rem] h-[24rem] [transform-style:preserve-3d;] translate-y-[-50rem]
-        animate-cardDrop [--delayTime:${3 + (order - 1) * 0.5}s]`,
+        animate-cardDrop [--delayTime:${3 + (order - 1) * 0.5}s] animate-none
+        rotate-x-[35deg] translate-y-[-2rem]`,
         size === 'xl' && 'w-[26rem] h-[39rem]',
         className
       )}
@@ -30,7 +41,9 @@ function CountryCard({ order, size, className }) {
       <div
         className={twMerge(
           'w-full h-full [transform-style:preserve-3d;]',
-          isCardOpen && 'animate-cardFlip'
+          defaultOpen
+            ? '[transform:rotate3d(0,1,0,180deg)]'
+            : isCardOpen && 'animate-cardFlip'
         )}
       >
         {/* Card Back */}
@@ -96,7 +109,9 @@ function CountryCard({ order, size, className }) {
 
 CountryCard.propTypes = {
   order: PropTypes.number.isRequired,
+  defaultOpen: PropTypes.bool,
   size: PropTypes.string,
+  showResult: PropTypes.func,
   className: PropTypes.string
 }
 export default CountryCard

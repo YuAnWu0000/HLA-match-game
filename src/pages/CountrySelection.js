@@ -1,7 +1,9 @@
+import { useState } from 'react'
+import PropTypes from 'prop-types'
 import CountryCard from '@/components/CountryCard'
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
 
-function CountryResult() {
+function CountryResult({ setIsShow }) {
   return (
     <div
       className="fixed top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.8)] flex items-center
@@ -12,6 +14,7 @@ function CountryResult() {
       </h1>
       <CountryCard
         order={1}
+        defaultOpen={true}
         size="xl"
         className="transform-none animate-none"
       />
@@ -21,6 +24,7 @@ function CountryResult() {
       <div
         className="absolute right-[1rem] bottom-[1rem] flex items-center cursor-pointer
           text-secondary hover:text-yellow-200"
+        onClick={() => setIsShow(false)}
       >
         <h3 className="text-inherit font-semibold text-[1.8rem]">下一步</h3>
         <ChevronRightIcon className="w-10 h-10 text-inherit" />
@@ -30,6 +34,7 @@ function CountryResult() {
 }
 
 function CountrySelection() {
+  const [showResult, setShowResult] = useState(false)
   return (
     <div className="w-full h-full [perspective:1000px;] animate-openLight brightness-[0.4]">
       {/* Table background */}
@@ -50,7 +55,11 @@ function CountrySelection() {
           gap-[2.6rem] [perspective:1000px;]"
       >
         {[1, 2, 3, 4, 5].map((item) => (
-          <CountryCard key={`country_card_${item}`} order={item} />
+          <CountryCard
+            key={`country_card_${item}`}
+            order={item}
+            showResult={setShowResult}
+          />
         ))}
       </div>
       {/* Story text */}
@@ -67,8 +76,11 @@ function CountrySelection() {
           (請點選一張牌)。
         </p>
       </div>
-      <CountryResult />
+      {showResult && <CountryResult setIsShow={setShowResult} />}
     </div>
   )
+}
+CountryResult.propTypes = {
+  setIsShow: PropTypes.func.isRequired
 }
 export default CountrySelection
