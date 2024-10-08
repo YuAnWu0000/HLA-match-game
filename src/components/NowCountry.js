@@ -9,7 +9,7 @@ function NowCountry({ className }) {
     flow === 'HLA_MATCHING' && (
       <div
         className={twMerge(
-          `absolute top-[30%] left-[0.5rem] w-[13rem] h-[11rem] rounded-[0.75rem]
+          `absolute top-[8%] left-[0.5rem] w-[13rem] h-[11rem] rounded-[0.75rem]
           overflow-hidden`,
           className
         )}
@@ -23,11 +23,11 @@ function NowCountry({ className }) {
             className="relative w-full h-auto rounded-md"
           />
           {/* Card frame */}
-          {/* <img
-            src="/images/card/country_card_front.png"
+          <img
+            src="/images/card/country_preview_frame.png"
             alt=""
             className="absolute top-0 right-0 w-full h-full"
-          /> */}
+          />
           {/* Country name */}
           <div className={'relative w-full text-center'}>
             <p className={'text-primary font-bold text-2xl'}>
