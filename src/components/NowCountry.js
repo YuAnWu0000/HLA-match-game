@@ -4,7 +4,13 @@ import { twMerge } from 'tailwind-merge'
 
 function NowCountry({ className }) {
   const { selectedCountryId } = useGameStore()
-  return <div className={twMerge('absolute top-0 left-0', className)}></div>
+  return (
+    selectedCountryId && (
+      <div className={twMerge('absolute top-0 left-0', className)}>
+        <div className="absolute top-0 right-0 w-full h-full rounded-[0.75rem] overflow-hidden"></div>
+      </div>
+    )
+  )
 }
 
 NowCountry.propTypes = {
