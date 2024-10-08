@@ -3,11 +3,20 @@ import DNACard from '@/components/DNACard'
 import PropTypes from 'prop-types'
 
 function PairingResult({ setIsShow }) {
-  return <div></div>
+  return (
+    <div className="absolute top-0 right-0 w-full h-full z-10">
+      <div className="absolute top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.7)]"></div>
+      <img
+        src="/images/pairing_result.png"
+        className="relative top-0 w-auto h-full mx-auto"
+        alt=""
+      />
+    </div>
+  )
 }
 
 function HLAMatching() {
-  const [showResult, setShowResult] = useState(false)
+  const [showResult, setShowResult] = useState(true)
   return (
     <div className="w-full h-full [perspective:1000px;]">
       {/* Background */}
