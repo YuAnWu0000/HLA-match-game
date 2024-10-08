@@ -1,6 +1,13 @@
+import { useState } from 'react'
 import DNACard from '@/components/DNACard'
+import PropTypes from 'prop-types'
+
+function PairingResult({ setIsShow }) {
+  return <div></div>
+}
 
 function HLAMatching() {
+  const [showResult, setShowResult] = useState(false)
   return (
     <div className="w-full h-full [perspective:1000px;]">
       {/* Background */}
@@ -31,8 +38,12 @@ function HLAMatching() {
           (請點選兩張基因牌)。
         </p>
       </div>
+      {showResult && <PairingResult setIsShow={setShowResult} />}
     </div>
   )
 }
 
+PairingResult.propTypes = {
+  setIsShow: PropTypes.func.isRequired
+}
 export default HLAMatching
