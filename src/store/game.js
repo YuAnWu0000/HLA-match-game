@@ -17,13 +17,11 @@ const useGameStore = create((set, get) => ({
     // 在台灣慈濟補助5次
     if (get().selectedCountryId === 5 && get().buddhistLifesRemain > 0)
       return set(() => ({
-        buddhistLifesRemain: get().buddhistLifesRemain - 1,
-        selectedCountryId: null
+        buddhistLifesRemain: get().buddhistLifesRemain - 1
       }))
     const cost = COUNTRY_MAP[get().selectedCountryId].cost
     return set(() => ({
-      money: get().money - cost,
-      selectedCountryId: null
+      money: get().money - cost
     }))
   }
 }))
