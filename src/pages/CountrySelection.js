@@ -1,11 +1,16 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import useGameStore from '@/store/game'
-import { COUNTRY_MAP, CountryCard } from '@/components/CountryCard'
+import useGameStore, { COUNTRY_MAP } from '@/store/game'
+import CountryCard from '@/components/CountryCard'
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
 
 function CountryResult({ setIsShow }) {
-  const { selectedCountryId, buddhistLifesRemain } = useGameStore()
+  const { selectedCountryId, buddhistLifesRemain, settleCountryFee } =
+    useGameStore()
+  function nextStep() {
+    settleCountryFee()
+    setIsShow(false)
+  }
   return (
     <div
       className="fixed top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.8)] flex items-center
@@ -44,7 +49,7 @@ function CountryResult({ setIsShow }) {
       <div
         className="group absolute right-[1rem] bottom-[1rem] flex items-center cursor-pointer
           text-secondary hover:text-yellow-400"
-        onClick={() => setIsShow(false)}
+        onClick={nextStep}
       >
         <h3
           className="text-inherit font-semibold text-[1.8rem] group-hover:border-b-2

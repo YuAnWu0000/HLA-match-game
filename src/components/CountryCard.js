@@ -1,16 +1,8 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
-import useGameStore from '@/store/game'
-
-export const COUNTRY_MAP = {
-  1: { name: '美國', cost: 50000, image: '/images/card/USA_flag.jpg' },
-  2: { name: '英國', cost: 30000, image: '/images/card/UK_flag.jpg' },
-  3: { name: '日本', cost: 30000, image: '/images/card/JP_flag.jpg' },
-  4: { name: '中國', cost: 30000, image: '/images/card/CN_flag.jpg' },
-  5: { name: '台灣', cost: 10000, image: '/images/card/TW_flag.jpg' }
-}
-export function CountryCard({
+import useGameStore, { COUNTRY_MAP } from '@/store/game'
+function CountryCard({
   order,
   defaultOpen = false,
   defaultId = null,
@@ -127,3 +119,4 @@ CountryCard.propTypes = {
   showResult: PropTypes.func,
   className: PropTypes.string
 }
+export default CountryCard
