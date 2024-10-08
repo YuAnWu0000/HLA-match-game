@@ -5,6 +5,7 @@ import useGameStore from '@/store/game'
 import { formatAmount } from '@/utils/format'
 import BuddhistLifes from '@/components/BuddhistLifes'
 import NowCountry from '@/components/NowCountry'
+import MyHLA from '@/components/MyHLA'
 
 const GAME_FLOW_COMPONENT_MAPPING = {
   SELF_HLA: <SelfHLA />,
@@ -31,6 +32,8 @@ function App() {
       <BuddhistLifes />
       {/* Now selected country */}
       <NowCountry />
+      {/* User's HLA */}
+      <MyHLA />
     </div>
   )
 }
