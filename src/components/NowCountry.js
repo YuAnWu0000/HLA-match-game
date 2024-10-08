@@ -8,11 +8,11 @@ function NowCountry({ className }) {
     selectedCountryId &&
     flow === 'HLA_MATCHING' && (
       <div className={twMerge('absolute top-[8%] left-[0.5rem]', className)}>
-        <h1 className="mb-2 text-3xl text-secondary font-bold text-center">
+        <h1 className="mb-2 text-xl text-secondary font-bold text-center">
           捐贈者國家:
         </h1>
         <div className="w-[13rem] h-[11rem] rounded-[0.75rem] overflow-hidden">
-          <div className="absolute top-0 right-0 bg-[rgba(255,255,255,0.5)] w-full h-full"></div>
+          {/* <div className="absolute top-0 right-0 bg-[rgba(255,255,255,0.5)] w-full h-full"></div> */}
           <div className="relative top-0 right-0 w-full h-full flex flex-col items-center gap-2">
             {/* Country flag */}
             <img
