@@ -64,7 +64,7 @@ function HLASelf() {
       {/* Next step */}
       <div
         className="group absolute right-[1rem] bottom-[1.5rem] flex items-center cursor-pointer
-          text-[#694949] hover:text-indigo-700"
+          text-[#8d5827] hover:text-indigo-700"
         onClick={() => setGameFlow('COUNTRY_SELECTION')}
       >
         <h3
