@@ -5,11 +5,16 @@ import CountryCard from '@/components/CountryCard'
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
 
 function CountryResult({ setIsShow }) {
-  const { selectedCountryId, buddhistLifesRemain, settleCountryFee } =
-    useGameStore()
+  const {
+    selectedCountryId,
+    buddhistLifesRemain,
+    settleCountryFee,
+    setGameFlow
+  } = useGameStore()
   function nextStep() {
     settleCountryFee()
     setIsShow(false)
+    setGameFlow('HLA_MATCHING')
   }
   return (
     <div
