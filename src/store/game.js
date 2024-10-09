@@ -38,6 +38,8 @@ const useGameStore = create((set, get) => ({
       money: get().money - cost
     }))
   },
+  showCountryResult: false,
+  setShowCountryResult: (isShow) => set(() => ({ showCountryResult: isShow })),
   showPairingResult: false,
   setShowPairingResult: (isShow) => set(() => ({ showPairingResult: isShow })),
   selectedHLAs: [],
