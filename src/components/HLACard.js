@@ -7,16 +7,18 @@ function HLACard({ order, className }) {
   const [isCardOpen, setIsCardOpen] = useState()
   const { setShowPairingResult } = useGameStore()
 
-  function cardBackClick() {
+  function cardClick() {
     console.log('!!')
     setIsCardOpen(true)
-    setShowPairingResult(true)
+    setTimeout(() => {
+      setShowPairingResult(true)
+    }, 1000)
   }
 
   return (
     <div
       className={twMerge('w-[12rem] h-[18rem]', className)}
-      onClick={() => setIsCardOpen((pre) => !pre)}
+      onClick={cardClick}
     >
       <div
         className={twMerge(

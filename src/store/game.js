@@ -1,4 +1,5 @@
 import { create } from 'zustand'
+
 export const COUNTRY_MAP = {
   1: { name: '美國', cost: 50000, image: '/images/card/USA_flag.jpg' },
   2: { name: '英國', cost: 30000, image: '/images/card/UK_flag.jpg' },
@@ -18,6 +19,7 @@ export const HLA_MAP = {
   g9: { name: 'HLA - g9', image: '/images/card/hla_g9.png' },
   p10: { name: 'HLA - p10', image: '/images/card/hla_p10.png' }
 }
+
 const useGameStore = create((set, get) => ({
   money: 1000000,
   flow: 'SELF_HLA', // SELF_HLA, COUNTRY_SELECTION, HLA_MATCHING
