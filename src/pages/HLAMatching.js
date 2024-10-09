@@ -1,4 +1,5 @@
 import HLACard from '@/components/HLACard'
+import { HLA_MAP } from '@/store/game'
 
 function HLAMatching() {
   return (
@@ -13,8 +14,8 @@ function HLAMatching() {
           content-center flex-wrap gap-8 [transform-style:preserve-3d;]
           [transform:rotateX(35deg);]"
       >
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
-          <HLACard key={`dna_card_${item}`} order={item} />
+        {Object.values(HLA_MAP).map((item, index) => (
+          <HLACard key={`hla_card_${item.name}`} order={index} data={item} />
         ))}
       </div>
       {/* Story text */}

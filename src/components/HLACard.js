@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import useGameStore from '@/store/game'
 import { twMerge } from 'tailwind-merge'
 
-function HLACard({ order, className }) {
+function HLACard({ order, data, className }) {
+  console.log(data)
   const [isCardOpen, setIsCardOpen] = useState()
   const { setShowPairingResult } = useGameStore()
 
@@ -45,7 +46,7 @@ function HLACard({ order, className }) {
           />
           {/* Card content */}
           <img
-            src={`/images/card/dna_${order}.png`}
+            src={data.image}
             alt=""
             className="absolute top-1/2 right-1/2 translate-x-1/2 -translate-y-1/2 w-[90%] h-[94%]"
           />
@@ -57,6 +58,7 @@ function HLACard({ order, className }) {
 
 HLACard.propTypes = {
   order: PropTypes.number.isRequired,
+  data: PropTypes.object.isRequired,
   className: PropTypes.string
 }
 export default HLACard
