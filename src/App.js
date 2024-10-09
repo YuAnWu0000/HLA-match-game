@@ -6,6 +6,7 @@ import { formatAmount } from '@/utils/format'
 import BuddhistLifes from '@/components/BuddhistLifes'
 import NowCountry from '@/components/NowCountry'
 import MyHLA from '@/components/MyHLA'
+import PairingResult from '@/components/PairingResult'
 
 const GAME_FLOW_COMPONENT_MAPPING = {
   SELF_HLA: <SelfHLA />,
@@ -34,6 +35,7 @@ function App() {
       <NowCountry />
       {/* User's HLA */}
       <MyHLA />
+      <PairingResult />
     </div>
   )
 }

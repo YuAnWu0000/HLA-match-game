@@ -1,12 +1,16 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
+import useGameStore from '@/store/game'
 import { twMerge } from 'tailwind-merge'
 
-function DNACard({ order, className }) {
+function HLACard({ order, className }) {
   const [isCardOpen, setIsCardOpen] = useState()
+  const { setShowPairingResult } = useGameStore()
+
   function cardBackClick() {
     console.log('!!')
     setIsCardOpen(true)
+    setShowPairingResult(true)
   }
 
   return (
@@ -49,8 +53,8 @@ function DNACard({ order, className }) {
   )
 }
 
-DNACard.propTypes = {
+HLACard.propTypes = {
   order: PropTypes.number.isRequired,
   className: PropTypes.string
 }
-export default DNACard
+export default HLACard

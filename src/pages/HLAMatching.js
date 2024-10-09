@@ -1,22 +1,6 @@
-import { useState } from 'react'
-import DNACard from '@/components/DNACard'
-import PropTypes from 'prop-types'
-
-function PairingResult({ setIsShow }) {
-  return (
-    <div className="absolute top-0 right-0 w-full h-full z-10">
-      <div className="absolute top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.7)]"></div>
-      <img
-        src="/images/pairing_result.png"
-        className="relative top-0 w-auto h-full mx-auto"
-        alt=""
-      />
-    </div>
-  )
-}
+import HLACard from '@/components/HLACard'
 
 function HLAMatching() {
-  const [showResult, setShowResult] = useState(true)
   return (
     <div className="w-full h-full [perspective:1000px;]">
       {/* Background */}
@@ -30,7 +14,7 @@ function HLAMatching() {
           [transform:rotateX(35deg);]"
       >
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
-          <DNACard key={`dna_card_${item}`} order={item} />
+          <HLACard key={`dna_card_${item}`} order={item} />
         ))}
       </div>
       {/* Story text */}
@@ -47,12 +31,8 @@ function HLAMatching() {
           (請點選兩張基因牌)。
         </p>
       </div>
-      {showResult && <PairingResult setIsShow={setShowResult} />}
     </div>
   )
 }
 
-PairingResult.propTypes = {
-  setIsShow: PropTypes.func.isRequired
-}
 export default HLAMatching
