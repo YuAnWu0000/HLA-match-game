@@ -7,11 +7,16 @@ export const COUNTRY_MAP = {
   5: { name: '台灣', cost: 10000, image: '/images/card/TW_flag.jpg' }
 }
 export const HLA_MAP = {
-  1: { name: '美國', cost: 50000, image: '/images/card/USA_flag.jpg' },
-  2: { name: '英國', cost: 30000, image: '/images/card/UK_flag.jpg' },
-  3: { name: '日本', cost: 30000, image: '/images/card/JP_flag.jpg' },
-  4: { name: '中國', cost: 30000, image: '/images/card/CN_flag.jpg' },
-  5: { name: '台灣', cost: 10000, image: '/images/card/TW_flag.jpg' }
+  r1: { name: 'HLA - r1', image: '/images/card/hla_r1.png' },
+  b2: { name: 'HLA - b2', image: '/images/card/hla_b2.png' },
+  g3: { name: 'HLA - g3', image: '/images/card/hla_g3.png' },
+  y4: { name: 'HLA - y4', image: '/images/card/hla_y4.png' },
+  d5: { name: 'HLA - d5', image: '/images/card/hla_d5.png' },
+  p6: { name: 'HLA - p6', image: '/images/card/hla_p6.png' },
+  o7: { name: 'HLA - o7', image: '/images/card/hla_o7.png' },
+  w8: { name: 'HLA - w8', image: '/images/card/hla_w8.png' },
+  g9: { name: 'HLA - g9', image: '/images/card/hla_g9.png' },
+  p10: { name: 'HLA - p10', image: '/images/card/hla_p10.png' }
 }
 const useGameStore = create((set, get) => ({
   money: 1000000,
