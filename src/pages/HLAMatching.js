@@ -15,7 +15,7 @@ function HLAMatching() {
           [transform:rotateX(35deg);]"
       >
         {Object.values(HLA_MAP).map((item, index) => (
-          <HLACard key={`hla_card_${item.name}`} order={index} data={item} />
+          <HLACard key={`hla_card_${item.id}`} order={index} data={item} />
         ))}
       </div>
       {/* Story text */}

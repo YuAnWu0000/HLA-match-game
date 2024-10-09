@@ -4,15 +4,14 @@ import useGameStore from '@/store/game'
 import { twMerge } from 'tailwind-merge'
 
 function HLACard({ order, data, className }) {
-  console.log(data)
   const [isCardOpen, setIsCardOpen] = useState()
-  const { setShowPairingResult } = useGameStore()
+  const { selectHLA } = useGameStore()
 
   function cardClick() {
     console.log('!!')
     setIsCardOpen(true)
     setTimeout(() => {
-      setShowPairingResult(true)
+      selectHLA(data)
     }, 1000)
   }
 
