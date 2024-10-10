@@ -9,8 +9,7 @@ function CountryResult() {
     setShowCountryResult,
     selectedCountryId,
     buddhistLifesRemain,
-    settleCountryFee,
-    setGameFlow
+    settleCountryFee
   } = useGameStore()
   function nextStep() {
     settleCountryFee()

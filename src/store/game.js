@@ -21,7 +21,7 @@ export const HLA_MAP = {
 }
 
 const useGameStore = create((set, get) => ({
-  money: 100000,
+  money: 50000,
   flow: 'SELF_HLA', // SELF_HLA, COUNTRY_SELECTION, HLA_MATCHING, WIN, FAILED
   setGameFlow: (flow) => set(() => ({ flow })),
   buddhistLifesRemain: 3,
@@ -29,13 +29,15 @@ const useGameStore = create((set, get) => ({
     { id: 'r1', name: 'HLA - r1', image: '/images/card/hla_r1.png' },
     { id: 'b2', name: 'HLA - b2', image: '/images/card/hla_b2.png' }
   ],
+  roundCount: 0,
   selectedCountryId: null,
   setSelectedCountryId: (id) => set(() => ({ selectedCountryId: id })),
   settleCountryFee: () => {
     // 在台灣慈濟補助5次
     if (get().selectedCountryId === 5 && get().buddhistLifesRemain > 0) {
       set(() => ({
-        buddhistLifesRemain: get().buddhistLifesRemain - 1
+        buddhistLifesRemain: get().buddhistLifesRemain - 1,
+        roundCount: get().roundCount + 1
       }))
       return get().setGameFlow('HLA_MATCHING')
     }
@@ -43,7 +45,8 @@ const useGameStore = create((set, get) => ({
     const cost = COUNTRY_MAP[get().selectedCountryId].cost
     if (get().money - cost < 0) return get().setGameFlow('FAILED')
     set(() => ({
-      money: get().money - cost
+      money: get().money - cost,
+      roundCount: get().roundCount + 1
     }))
     return get().setGameFlow('HLA_MATCHING')
   },
@@ -64,8 +67,6 @@ const useGameStore = create((set, get) => ({
       (my) => !!get().selectedHLAs.find((s) => s.id === my.id)
     )
     const isPairing = isPairingArr.reduce((acc, curr) => acc && curr, true)
-    console.log('PR: ', isPairingArr)
-    console.log('PR: ', isPairing)
     return isPairing
   }
 }))
