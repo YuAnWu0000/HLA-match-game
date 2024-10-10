@@ -34,8 +34,7 @@ function CountryCard({
     <div
       className={twMerge(
         `w-[16rem] h-[24rem] [transform-style:preserve-3d;] translate-y-[-50rem]
-        animate-cardDrop [--delayTime:${3 + (order - 1) * 0.5}s] animate-none
-        rotate-x-[35deg] translate-y-[-2rem]`,
+        animate-cardDrop [--delayTime:${3 + (order - 1) * 0.5}s]`,
         size === 'xl' && 'w-[26rem] h-[39rem]',
         className
       )}

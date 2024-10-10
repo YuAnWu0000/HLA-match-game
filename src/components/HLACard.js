@@ -12,7 +12,7 @@ function HLACard({ order, data, className }) {
     setIsCardOpen(true)
     setTimeout(() => {
       selectHLA(data)
-    }, 1000)
+    }, 500)
   }
 
   return (

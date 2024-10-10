@@ -7,7 +7,7 @@ function NowCountry({ className }) {
   return (
     selectedCountryId &&
     flow === 'HLA_MATCHING' && (
-      <div className={twMerge('absolute top-[15%] left-[0rem]', className)}>
+      <div className={twMerge('absolute top-[10%] left-[0rem]', className)}>
         <h1 className="text-xl mb-[-0.7rem] text-secondary font-bold text-center">
           捐贈者國家:
         </h1>

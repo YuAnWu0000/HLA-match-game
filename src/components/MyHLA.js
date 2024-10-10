@@ -6,7 +6,7 @@ function MyHLA({ className }) {
   const { flow, myHLAs } = useGameStore()
   return (
     flow !== 'SELF_HLA' && (
-      <div className={twMerge('absolute top-[12%] right-[0.5rem]')}>
+      <div className={twMerge('absolute top-[8%] right-[0.5rem]')}>
         <h1 className="mb-2 text-xl text-secondary font-bold text-center">
           我的基因對:
         </h1>
