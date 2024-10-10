@@ -1,6 +1,8 @@
 import SelfHLA from '@/pages/SelfHLA'
 import CountrySelection from '@/pages/CountrySelection'
 import HLAMatching from '@/pages/HLAMatching'
+import Win from '@/pages/Win'
+import Failed from '@/pages/Failed'
 import useGameStore from '@/store/game'
 import { formatAmount } from '@/utils/format'
 import BuddhistLifes from '@/components/BuddhistLifes'
@@ -12,7 +14,9 @@ import PairingResult from '@/components/PairingResult'
 const GAME_FLOW_COMPONENT_MAPPING = {
   SELF_HLA: <SelfHLA />,
   COUNTRY_SELECTION: <CountrySelection />,
-  HLA_MATCHING: <HLAMatching />
+  HLA_MATCHING: <HLAMatching />,
+  WIN: <Win />,
+  FAILED: <Failed />
 }
 function App() {
   const { money, flow } = useGameStore()

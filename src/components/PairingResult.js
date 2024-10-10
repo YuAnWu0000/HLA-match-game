@@ -4,12 +4,20 @@ import { ChevronRightIcon } from '@heroicons/react/24/outline'
 function PairingResult() {
   const {
     myHLAs,
+    money,
+    setGameFlow,
     showPairingResult,
     setShowPairingResult,
     selectedHLAs,
     checkPairingResult
   } = useGameStore()
   function nextStep() {
+    if (checkPairingResult()) {
+      setGameFlow('WIN')
+    } else {
+      if (money > 0) setGameFlow('COUNTRY_SELECTION')
+      else setGameFlow('FAILED')
+    }
     setShowPairingResult(false)
   }
   return (
