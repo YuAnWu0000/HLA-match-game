@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
-import useGameStore, { HLA_MAP } from '@/store/game'
+import useGameStore from '@/store/game'
 import { twMerge } from 'tailwind-merge'
 
 function MyHLA({ className }) {
-  const { flow } = useGameStore()
+  const { flow, myHLAs } = useGameStore()
   return (
     flow !== 'SELF_HLA' && (
       <div className={twMerge('absolute top-[12%] right-[0.5rem]')}>
@@ -13,22 +13,22 @@ function MyHLA({ className }) {
         <div className="flex items-center justify-center gap-4">
           {/* First HLA */}
           <div className="w-[8rem] text-center">
-            <img src={HLA_MAP['r1'].image} alt="" className="w-full h-auto" />
+            <img src={myHLAs[0].image} alt="" className="w-full h-auto" />
             <h1
               className="font-semibold text-secondary text-xl [text-shadow:1px_1px_0px_#BFBFBF]
                 tracking-wide mt-2"
             >
-              {HLA_MAP['r1'].name}
+              {myHLAs[0].name}
             </h1>
           </div>
           {/* Second HLA */}
           <div className="w-[8rem] text-center">
-            <img src={HLA_MAP['b2'].image} alt="" className="w-full h-auto" />
+            <img src={myHLAs[1].image} alt="" className="w-full h-auto" />
             <h1
               className="font-semibold text-secondary text-xl [text-shadow:1px_1px_0px_#BFBFBF]
                 tracking-wide mt-2"
             >
-              {HLA_MAP['b2'].name}
+              {myHLAs[1].name}
             </h1>
           </div>
         </div>

@@ -25,6 +25,10 @@ const useGameStore = create((set, get) => ({
   flow: 'SELF_HLA', // SELF_HLA, COUNTRY_SELECTION, HLA_MATCHING
   setGameFlow: (flow) => set(() => ({ flow })),
   buddhistLifesRemain: 3,
+  myHLAs: [
+    { id: 'r1', name: 'HLA - r1', image: '/images/card/hla_r1.png' },
+    { id: 'b2', name: 'HLA - b2', image: '/images/card/hla_b2.png' }
+  ],
   selectedCountryId: null,
   setSelectedCountryId: (id) => set(() => ({ selectedCountryId: id })),
   settleCountryFee: () => {

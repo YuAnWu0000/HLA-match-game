@@ -1,9 +1,8 @@
-import PropTypes from 'prop-types'
-import useGameStore, { HLA_MAP } from '@/store/game'
+import useGameStore from '@/store/game'
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
 
 function PairingResult() {
-  const { showPairingResult, setShowPairingResult, selectedHLAs } =
+  const { myHLAs, showPairingResult, setShowPairingResult, selectedHLAs } =
     useGameStore()
   function nextStep() {
     setShowPairingResult(false)
@@ -20,51 +19,138 @@ function PairingResult() {
         />
         {/* HLA area */}
         <div
-          className="relative top-[29%] right-[0.05rem] m-auto w-[46.7%] h-[52.5%] bg-[#dde0e5]
-            border-2 border-black flex items-center justify-evenly"
+          className="relative top-[29%] right-[0.1rem] m-auto w-[46.9%] h-[52.5%] bg-[#dde0e5]
+            border-4 border-[#a1a5af] flex items-start justify-evenly"
         >
-          {/* Pairing HLA 1 */}
-          <div className="w-[11rem] text-center mx-2 p-4 border-2 border-black">
-            <img src={selectedHLAs[0].image} alt="" className="w-full h-auto" />
-            <h1
-              className="font-semibold text-primary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
-                tracking-wide mt-3"
+          <div className="w-1/2 flex flex-wrap items-center">
+            <h2
+              className="w-full h-[6rem] leading-[6rem] mb-[1rem] text-primary text-4xl font-semibold
+                text-center border-b-2 border-[#a1a5af]
+                [text-shadow:1px_1px_0px_#BFBFBF,2px_2px_0px_#a1a5af]"
             >
-              {selectedHLAs[0].name}
-            </h1>
+              對方基因
+            </h2>
+            {/* Pairing HLA 1 */}
+            <div className="w-1/2 text-center p-3">
+              <img
+                src={selectedHLAs[0].image}
+                alt=""
+                className="w-full h-auto"
+              />
+              <h1
+                className="font-semibold text-primary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
+                  tracking-wide mt-3"
+              >
+                {selectedHLAs[0].name}
+              </h1>
+            </div>
+            {/* Pairing HLA 2 */}
+            <div className="w-1/2 text-center p-3">
+              <img
+                src={selectedHLAs[1].image}
+                alt=""
+                className="w-full h-auto"
+              />
+              <h1
+                className="font-semibold text-primary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
+                  tracking-wide mt-3"
+              >
+                {selectedHLAs[1].name}
+              </h1>
+            </div>
           </div>
-          {/* Pairing HLA 2 */}
-          <div className="w-[11rem] text-center mx-2 p-4 border-2 border-black">
-            <img src={selectedHLAs[1].image} alt="" className="w-full h-auto" />
-            <h1
-              className="font-semibold text-primary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
-                tracking-wide mt-3"
+          <div className="w-[3px] h-full bg-[#a1a5af]"></div>
+          <div className="w-1/2 flex flex-wrap items-center">
+            <h2
+              className="w-full h-[6rem] leading-[6rem] mb-[1rem] text-primary text-4xl font-semibold
+                text-center border-b-2 border-[#a1a5af]
+                [text-shadow:1px_1px_0px_#BFBFBF,2px_2px_0px_#a1a5af]"
             >
-              {selectedHLAs[1].name}
-            </h1>
-          </div>
-          <div className="w-[2px] h-full bg-black"></div>
-          {/* First HLA */}
-          <div className="w-[11rem] text-center mx-2 border p-4 border-black">
-            <img src={HLA_MAP['r1'].image} alt="" className="w-full h-auto" />
-            <h1
-              className="font-semibold text-primary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
-                tracking-wide mt-3"
-            >
-              {HLA_MAP['r1'].name}
-            </h1>
-          </div>
-          {/* Second HLA */}
-          <div className="w-[11rem] text-center mx-2 border p-4 border-black">
-            <img src={HLA_MAP['b2'].image} alt="" className="w-full h-auto" />
-            <h1
-              className="font-semibold text-primary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
-                tracking-wide mt-3"
-            >
-              {HLA_MAP['b2'].name}
-            </h1>
+              我的基因
+            </h2>
+            {/* First HLA */}
+            <div className="w-1/2 text-center p-3">
+              <img src={myHLAs[0].image} alt="" className="w-full h-auto" />
+              <h1
+                className="font-semibold text-primary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
+                  tracking-wide mt-3"
+              >
+                {myHLAs[0].name}
+              </h1>
+            </div>
+            {/* Second HLA */}
+            <div className="w-1/2 text-center p-3">
+              <img src={myHLAs[1].image} alt="" className="w-full h-auto" />
+              <h1
+                className="font-semibold text-primary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
+                  tracking-wide mt-3"
+              >
+                {myHLAs[1].name}
+              </h1>
+            </div>
           </div>
         </div>
+        {/* MATCHED */}
+        <div
+          className="absolute top-1/2 right-1/2 [transform:translate(50%,-50%)_rotate(-45deg)]
+            border-[1rem] border-green-500 px-12"
+        >
+          <h1
+            className="text-center text-[10rem] font-[900] tracking-widest after:content-['配對成功!']
+              after:text-transparent after:[text-shadow:2px_2px_0px_#ffffff]"
+          >
+            <div
+              className="w-full text-center [background-clip:text] text-transparent
+                bg-[linear-gradient(to_top_right,#15803d,#16a34a,#22c55e,#4ade80,#86efac,#a7f3d0)]
+                absolute right-0"
+            >
+              配對成功!
+            </div>
+          </h1>
+          <h1
+            className="text-center text-[7rem] font-[900] tracking-widest after:content-['MATCHED!']
+              after:text-transparent after:[text-shadow:2px_2px_0px_#ffffff] mt-[-3rem]"
+          >
+            <div
+              className="w-full text-center [background-clip:text] text-transparent
+                bg-[linear-gradient(to_top_right,#15803d,#16a34a,#22c55e,#4ade80,#86efac,#a7f3d0)]
+                absolute right-0"
+            >
+              MATCHED!
+            </div>
+          </h1>
+        </div>
+
+        {/* MISMATCHED */}
+        {/* <div
+          className="absolute top-1/2 right-1/2 [transform:translate(50%,-50%)_rotate(-45deg)]
+            border-[1rem] border-red-500 px-12"
+        >
+          <h1
+            className="text-center text-[10rem] font-[900] tracking-widest after:content-['配對失敗!']
+              after:text-transparent after:[text-shadow:2px_2px_0px_#ffffff]"
+          >
+            <div
+              className="w-full text-center [background-clip:text] text-transparent
+                bg-[linear-gradient(to_top_right,#991b1b,#b91c1c,#dc2626,#ef4444,#f87171,#fca5a5)]
+                absolute right-0"
+            >
+              配對失敗!
+            </div>
+          </h1>
+          <h1
+            className="text-center text-[6rem] font-[900] tracking-widest after:content-['MISMATCHED!']
+              after:text-transparent after:[text-shadow:2px_2px_0px_#ffffff] mt-[-3rem]"
+          >
+            <div
+              className="w-full text-center [background-clip:text] text-transparent
+                bg-[linear-gradient(to_top_right,#991b1b,#b91c1c,#dc2626,#ef4444,#f87171,#fca5a5)]
+                absolute right-0"
+            >
+              MISMATCHED!
+            </div>
+          </h1>
+        </div> */}
 
         {/* Next step */}
         <div
