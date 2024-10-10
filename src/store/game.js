@@ -33,6 +33,7 @@ const useGameStore = create((set, get) => ({
       return set(() => ({
         buddhistLifesRemain: get().buddhistLifesRemain - 1
       }))
+    // 其餘情況直接扣錢
     const cost = COUNTRY_MAP[get().selectedCountryId].cost
     return set(() => ({
       money: get().money - cost
