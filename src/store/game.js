@@ -22,7 +22,7 @@ export const HLA_MAP = {
 
 const useGameStore = create((set, get) => ({
   money: 1000000,
-  flow: 'SELF_HLA', // SELF_HLA, COUNTRY_SELECTION, HLA_MATCHING
+  flow: 'SELF_HLA', // SELF_HLA, COUNTRY_SELECTION, HLA_MATCHING, WiN, LOSE
   setGameFlow: (flow) => set(() => ({ flow })),
   buddhistLifesRemain: 3,
   myHLAs: [
@@ -54,6 +54,7 @@ const useGameStore = create((set, get) => ({
     set(() => ({ selectedHLAs: nowSelectedHLAs }))
     if (nowSelectedHLAs.length === 2) get().setShowPairingResult(true)
   },
+  clearSelectedHLAs: () => set(() => ({ selectedHLAs: [] })),
   checkPairingResult: () => {
     const isPairingArr = get().myHLAs.map(
       (my) => !!get().selectedHLAs.find((s) => s.id === my.id)
