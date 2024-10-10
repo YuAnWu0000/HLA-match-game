@@ -9,9 +9,11 @@ function PairingResult() {
     showPairingResult,
     setShowPairingResult,
     selectedHLAs,
-    checkPairingResult
+    checkPairingResult,
+    clearSelectedHLAs
   } = useGameStore()
   function nextStep() {
+    clearSelectedHLAs()
     if (checkPairingResult()) {
       setGameFlow('WIN')
     } else {

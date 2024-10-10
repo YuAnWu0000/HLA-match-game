@@ -15,7 +15,6 @@ function CountryResult() {
   function nextStep() {
     settleCountryFee()
     setShowCountryResult(false)
-    setGameFlow('HLA_MATCHING')
   }
   return (
     showCountryResult && (

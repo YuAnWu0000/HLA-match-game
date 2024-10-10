@@ -21,7 +21,7 @@ export const HLA_MAP = {
 }
 
 const useGameStore = create((set, get) => ({
-  money: 1000000,
+  money: 100000,
   flow: 'SELF_HLA', // SELF_HLA, COUNTRY_SELECTION, HLA_MATCHING, WIN, FAILED
   setGameFlow: (flow) => set(() => ({ flow })),
   buddhistLifesRemain: 3,
@@ -33,15 +33,19 @@ const useGameStore = create((set, get) => ({
   setSelectedCountryId: (id) => set(() => ({ selectedCountryId: id })),
   settleCountryFee: () => {
     // 在台灣慈濟補助5次
-    if (get().selectedCountryId === 5 && get().buddhistLifesRemain > 0)
-      return set(() => ({
+    if (get().selectedCountryId === 5 && get().buddhistLifesRemain > 0) {
+      set(() => ({
         buddhistLifesRemain: get().buddhistLifesRemain - 1
       }))
+      return get().setGameFlow('HLA_MATCHING')
+    }
     // 其餘情況直接扣錢
     const cost = COUNTRY_MAP[get().selectedCountryId].cost
-    return set(() => ({
+    if (get().money - cost < 0) return get().setGameFlow('FAILED')
+    set(() => ({
       money: get().money - cost
     }))
+    return get().setGameFlow('HLA_MATCHING')
   },
   showCountryResult: false,
   setShowCountryResult: (isShow) => set(() => ({ showCountryResult: isShow })),

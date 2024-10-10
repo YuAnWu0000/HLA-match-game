@@ -81,7 +81,7 @@ module.exports = {
         cardScale: '1s scale 1s ease-out forwards',
         openLight: '1.5s lightUp 0.5s ease-out forwards',
         cardFlip: '0.5s flip ease-out forwards',
-        fadeIn: '0.2s fadeIn 2s ease-out forwards'
+        fadeIn: '0.2s fadeIn 1s ease-out forwards'
       }
     }
   },
