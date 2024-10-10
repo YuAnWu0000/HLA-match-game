@@ -65,6 +65,14 @@ module.exports = {
           '100%': {
             transform: 'rotate3d(0, 1, 0, 180deg)'
           }
+        },
+        fadeIn: {
+          '0%': {
+            opacity: 0
+          },
+          '100%': {
+            opacity: 1
+          }
         }
       },
       animation: {
@@ -72,7 +80,8 @@ module.exports = {
         cardDrop: '0.2s drop var(--delayTime) ease-out forwards',
         cardScale: '1s scale 1s ease-out forwards',
         openLight: '1.5s lightUp 0.5s ease-out forwards',
-        cardFlip: '0.5s flip ease-out forwards'
+        cardFlip: '0.5s flip ease-out forwards',
+        fadeIn: '0.2s fadeIn 2s ease-out forwards'
       }
     }
   },

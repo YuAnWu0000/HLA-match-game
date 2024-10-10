@@ -8,7 +8,7 @@ function HLACard({ order, data, className }) {
   const { selectHLA } = useGameStore()
 
   function cardClick() {
-    console.log('!!')
+    if (isCardOpen) return
     setIsCardOpen(true)
     setTimeout(() => {
       selectHLA(data)

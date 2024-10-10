@@ -98,7 +98,7 @@ function PairingResult() {
         {checkPairingResult() ? (
           <div
             className="absolute top-1/2 right-1/2 [transform:translate(50%,-50%)_rotate(-45deg)]
-              border-[1rem] border-green-500 px-12"
+              border-[1rem] border-green-500 px-12 animate-fadeIn opacity-0"
           >
             {/* MATCHED */}
             <h1
@@ -129,7 +129,7 @@ function PairingResult() {
         ) : (
           <div
             className="absolute top-1/2 right-1/2 [transform:translate(50%,-50%)_rotate(-45deg)]
-              border-[1rem] border-red-500 px-12"
+              border-[1rem] border-red-500 px-12 animate-fadeIn opacity-0"
           >
             {/* MISMATCHED */}
             <h1
