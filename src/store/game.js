@@ -24,7 +24,7 @@ const useGameStore = create((set, get) => ({
   money: 50000,
   flow: 'SELF_HLA', // SELF_HLA, COUNTRY_SELECTION, HLA_MATCHING, WIN, FAILED
   setGameFlow: (flow) => set(() => ({ flow })),
-  buddhistLifesRemain: 3,
+  buddhistLifesRemain: 5,
   myHLAs: [
     { id: 'r1', name: 'HLA - r1', image: '/images/card/hla_r1.png' },
     { id: 'b2', name: 'HLA - b2', image: '/images/card/hla_b2.png' }

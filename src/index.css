@@ -25,6 +25,12 @@ code {
     --ratio: 1;
   }
 }
+@media (max-width: 1500px) {
+  html {
+    font-size: 14px;
+    --ratio: 0.875;
+  }
+}
 @media (max-width: 768px) {
   html {
     font-size: 10px;
