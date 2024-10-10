@@ -2,8 +2,13 @@ import useGameStore from '@/store/game'
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
 
 function PairingResult() {
-  const { myHLAs, showPairingResult, setShowPairingResult, selectedHLAs } =
-    useGameStore()
+  const {
+    myHLAs,
+    showPairingResult,
+    setShowPairingResult,
+    selectedHLAs,
+    checkPairingResult
+  } = useGameStore()
   function nextStep() {
     setShowPairingResult(false)
   }
@@ -90,67 +95,69 @@ function PairingResult() {
             </div>
           </div>
         </div>
-        {/* MATCHED */}
-        <div
-          className="absolute top-1/2 right-1/2 [transform:translate(50%,-50%)_rotate(-45deg)]
-            border-[1rem] border-green-500 px-12"
-        >
-          <h1
-            className="text-center text-[10rem] font-[900] tracking-widest after:content-['配對成功!']
-              after:text-transparent after:[text-shadow:2px_2px_0px_#ffffff]"
+        {checkPairingResult() ? (
+          <div
+            className="absolute top-1/2 right-1/2 [transform:translate(50%,-50%)_rotate(-45deg)]
+              border-[1rem] border-green-500 px-12"
           >
-            <div
-              className="w-full text-center [background-clip:text] text-transparent
-                bg-[linear-gradient(to_top_right,#15803d,#16a34a,#22c55e,#4ade80,#86efac,#a7f3d0)]
-                absolute right-0"
+            {/* MATCHED */}
+            <h1
+              className="text-center text-[10rem] font-[900] tracking-widest after:content-['配對成功!']
+                after:text-transparent after:[text-shadow:2px_2px_0px_#ffffff]"
             >
-              配對成功!
-            </div>
-          </h1>
-          <h1
-            className="text-center text-[7rem] font-[900] tracking-widest after:content-['MATCHED!']
-              after:text-transparent after:[text-shadow:2px_2px_0px_#ffffff] mt-[-3rem]"
+              <div
+                className="w-full text-center [background-clip:text] text-transparent
+                  bg-[linear-gradient(to_top_right,#15803d,#16a34a,#22c55e,#4ade80,#86efac,#a7f3d0)]
+                  absolute right-0"
+              >
+                配對成功!
+              </div>
+            </h1>
+            <h1
+              className="text-center text-[7rem] font-[900] tracking-widest after:content-['MATCHED!']
+                after:text-transparent after:[text-shadow:2px_2px_0px_#ffffff] mt-[-3rem]"
+            >
+              <div
+                className="w-full text-center [background-clip:text] text-transparent
+                  bg-[linear-gradient(to_top_right,#15803d,#16a34a,#22c55e,#4ade80,#86efac,#a7f3d0)]
+                  absolute right-0"
+              >
+                MATCHED!
+              </div>
+            </h1>
+          </div>
+        ) : (
+          <div
+            className="absolute top-1/2 right-1/2 [transform:translate(50%,-50%)_rotate(-45deg)]
+              border-[1rem] border-red-500 px-12"
           >
-            <div
-              className="w-full text-center [background-clip:text] text-transparent
-                bg-[linear-gradient(to_top_right,#15803d,#16a34a,#22c55e,#4ade80,#86efac,#a7f3d0)]
-                absolute right-0"
+            {/* MISMATCHED */}
+            <h1
+              className="text-center text-[10rem] font-[900] tracking-widest after:content-['配對失敗!']
+                after:text-transparent after:[text-shadow:2px_2px_0px_#ffffff]"
             >
-              MATCHED!
-            </div>
-          </h1>
-        </div>
-
-        {/* MISMATCHED */}
-        {/* <div
-          className="absolute top-1/2 right-1/2 [transform:translate(50%,-50%)_rotate(-45deg)]
-            border-[1rem] border-red-500 px-12"
-        >
-          <h1
-            className="text-center text-[10rem] font-[900] tracking-widest after:content-['配對失敗!']
-              after:text-transparent after:[text-shadow:2px_2px_0px_#ffffff]"
-          >
-            <div
-              className="w-full text-center [background-clip:text] text-transparent
-                bg-[linear-gradient(to_top_right,#991b1b,#b91c1c,#dc2626,#ef4444,#f87171,#fca5a5)]
-                absolute right-0"
+              <div
+                className="w-full text-center [background-clip:text] text-transparent
+                  bg-[linear-gradient(to_top_right,#991b1b,#b91c1c,#dc2626,#ef4444,#f87171,#fca5a5)]
+                  absolute right-0"
+              >
+                配對失敗!
+              </div>
+            </h1>
+            <h1
+              className="text-center text-[6rem] font-[900] tracking-widest after:content-['MISMATCHED!']
+                after:text-transparent after:[text-shadow:2px_2px_0px_#ffffff] mt-[-3rem]"
             >
-              配對失敗!
-            </div>
-          </h1>
-          <h1
-            className="text-center text-[6rem] font-[900] tracking-widest after:content-['MISMATCHED!']
-              after:text-transparent after:[text-shadow:2px_2px_0px_#ffffff] mt-[-3rem]"
-          >
-            <div
-              className="w-full text-center [background-clip:text] text-transparent
-                bg-[linear-gradient(to_top_right,#991b1b,#b91c1c,#dc2626,#ef4444,#f87171,#fca5a5)]
-                absolute right-0"
-            >
-              MISMATCHED!
-            </div>
-          </h1>
-        </div> */}
+              <div
+                className="w-full text-center [background-clip:text] text-transparent
+                  bg-[linear-gradient(to_top_right,#991b1b,#b91c1c,#dc2626,#ef4444,#f87171,#fca5a5)]
+                  absolute right-0"
+              >
+                MISMATCHED!
+              </div>
+            </h1>
+          </div>
+        )}
 
         {/* Next step */}
         <div

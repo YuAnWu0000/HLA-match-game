@@ -53,6 +53,15 @@ const useGameStore = create((set, get) => ({
     const nowSelectedHLAs = get().selectedHLAs.concat(hlaData)
     set(() => ({ selectedHLAs: nowSelectedHLAs }))
     if (nowSelectedHLAs.length === 2) get().setShowPairingResult(true)
+  },
+  checkPairingResult: () => {
+    const isPairingArr = get().myHLAs.map(
+      (my) => !!get().selectedHLAs.find((s) => s.id === my.id)
+    )
+    const isPairing = isPairingArr.reduce((acc, curr) => acc && curr, true)
+    console.log('PR: ', isPairingArr)
+    console.log('PR: ', isPairing)
+    return isPairing
   }
 }))
 export default useGameStore
