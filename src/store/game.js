@@ -22,7 +22,7 @@ export const HLA_MAP = {
 
 const useGameStore = create((set, get) => ({
   money: 1000000,
-  flow: 'SELF_HLA', // SELF_HLA, COUNTRY_SELECTION, HLA_MATCHING, WiN, LOSE
+  flow: 'SELF_HLA', // SELF_HLA, COUNTRY_SELECTION, HLA_MATCHING, WIN, FAILED
   setGameFlow: (flow) => set(() => ({ flow })),
   buddhistLifesRemain: 3,
   myHLAs: [
