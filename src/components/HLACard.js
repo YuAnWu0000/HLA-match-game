@@ -27,7 +27,9 @@ function HLACard({ order, data, defaultOpen = false, size = 'md', className }) {
       <div
         className={twMerge(
           'w-full h-full [transform-style:preserve-3d;]',
-          isCardOpen && 'animate-cardFlip'
+          defaultOpen
+            ? '[transform:rotate3d(0,1,0,180deg)]'
+            : isCardOpen && 'animate-cardFlip'
         )}
       >
         {/* Card Back */}

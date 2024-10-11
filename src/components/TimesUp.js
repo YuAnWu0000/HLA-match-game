@@ -4,9 +4,11 @@ import useGameStore, { HLA_MAP } from '@/store/game'
 import HLACard from '@/components/HLACard'
 
 function TimesUp() {
-  const { setGameFlow, showTimesUp, setShowTimesUp } = useGameStore()
+  const { setGameFlow, setFailedReason, showTimesUp, setShowTimesUp } =
+    useGameStore()
   function nextStep() {
     setGameFlow('FAILED')
+    setFailedReason('人生無常')
     setShowTimesUp(false)
   }
   return (

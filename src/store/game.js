@@ -74,6 +74,8 @@ const useGameStore = create((set, get) => ({
     return isPairing
   },
   showTimesUp: false,
-  setShowTimesUp: (isShow) => set(() => ({ showTimesUp: isShow }))
+  setShowTimesUp: (isShow) => set(() => ({ showTimesUp: isShow })),
+  failedReason: '錢幣不足',
+  setFailedReason: (reason) => set(() => ({ failedReason: reason }))
 }))
 export default useGameStore
