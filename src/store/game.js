@@ -52,7 +52,7 @@ export const HLA_MAP = {
 
 const useGameStore = create((set, get) => ({
   money: 50000,
-  flow: 'SELF_HLA', // SELF_HLA, COUNTRY_SELECTION, HLA_MATCHING, WIN, FAILED
+  flow: 'SELF_HLA', // SELF_HLA, COUNTRY_SELECTION, HLA_MATCHING, DONATION_COST, WIN, FAILED
   setGameFlow: (flow) => set(() => ({ flow })),
   buddhistLifesRemain: 5,
   myHLAs: [
@@ -107,6 +107,12 @@ const useGameStore = create((set, get) => ({
   showTimesUp: false,
   setShowTimesUp: (isShow) => set(() => ({ showTimesUp: isShow })),
   failedReason: '錢幣不足',
-  setFailedReason: (reason) => set(() => ({ failedReason: reason }))
+  setFailedReason: (reason) => set(() => ({ failedReason: reason })),
+  settleDonationCost: () => {
+    const checkCost = COUNTRY_MAP[get().selectedCountryId].checkUpCost
+    const donationCost = COUNTRY_MAP[get().selectedCountryId].donationCost
+    if (get().money >= checkCost + donationCost) get().setGameFlow('WIN')
+    else get().setGameFlow('FAILED')
+  }
 }))
 export default useGameStore

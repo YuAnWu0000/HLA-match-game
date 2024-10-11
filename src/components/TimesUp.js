@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
 import useGameStore, { HLA_MAP } from '@/store/game'
 import HLACard from '@/components/HLACard'
@@ -47,5 +46,4 @@ function TimesUp() {
     )
   )
 }
-TimesUp.propTypes = {}
 export default TimesUp

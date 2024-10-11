@@ -1,6 +1,7 @@
 import SelfHLA from '@/pages/SelfHLA'
 import CountrySelection from '@/pages/CountrySelection'
 import HLAMatching from '@/pages/HLAMatching'
+import DonationCost from '@/pages/DonationCost'
 import Win from '@/pages/Win'
 import Failed from '@/pages/Failed'
 import useGameStore from '@/store/game'
@@ -16,6 +17,7 @@ const GAME_FLOW_COMPONENT_MAPPING = {
   SELF_HLA: <SelfHLA />,
   COUNTRY_SELECTION: <CountrySelection />,
   HLA_MATCHING: <HLAMatching />,
+  DONATION_COST: <DonationCost />,
   WIN: <Win />,
   FAILED: <Failed />
 }

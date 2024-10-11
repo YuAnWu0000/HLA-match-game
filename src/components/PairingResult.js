@@ -14,12 +14,13 @@ function PairingResult() {
   } = useGameStore()
   function nextStep() {
     if (checkPairingResult()) {
-      setGameFlow('WIN')
+      setGameFlow('DONATION_COST')
     } else {
-      if (money > 0) setGameFlow('COUNTRY_SELECTION')
-      else setGameFlow('FAILED')
+      if (money > 0) {
+        setGameFlow('COUNTRY_SELECTION')
+        clearPairingResult()
+      } else setGameFlow('FAILED')
     }
-    clearPairingResult()
     setShowPairingResult(false)
   }
   return (
