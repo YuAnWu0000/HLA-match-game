@@ -10,7 +10,7 @@ function CountrySelection() {
         className="absolute top-0 right-0 -z-50 w-full h-full bg-repeat bg-[length:100%_auto]
           bg-[center_0rem] bg-[url('/images/bg_country.jpg')] animate-bgZoomIn
           [--bg-size:140%_auto] [--bg-position:center_-20rem] 2xl:[--bg-size:160%_auto]
-          2xl:[--bg-position:center_-17rem]"
+          2xl:[--bg-position:center_-15rem]"
       ></div>
       {/* <img
         src="/images/bg_0.jpg"
@@ -21,7 +21,7 @@ function CountrySelection() {
       {/* Card wrapper */}
       <div
         className="relative top-[14rem] w-full h-fit flex justify-center content-center flex-wrap
-          gap-[2.3rem] [perspective:1000px;]"
+          gap-[2rem] [perspective:1000px;]"
       >
         {[1, 2, 3, 4, 5].map((item) => (
           <CountryCard

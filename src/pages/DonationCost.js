@@ -14,9 +14,10 @@ function DonationCost() {
 
   return (
     <div
-      className="fixed top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.8)] flex items-center
-        justify-center"
+      className="fixed top-0 right-0 w-full h-full bg-[url('/images/check_up.jpg')] bg-cover flex
+        items-center justify-center"
     >
+      <div className="absolute top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.5)]"></div>
       {/* Story text */}
       <div className="w-full h-[12rem] fixed bottom-0 bg-[rgba(255,255,255,0.4)] border border-white">
         <h3
@@ -57,7 +58,7 @@ function DonationCost() {
       {/* Next step */}
       <div
         className="group absolute right-[1rem] bottom-[1rem] flex items-center cursor-pointer
-          text-secondary hover:text-yellow-400"
+          text-orange-300 hover:text-yellow-400"
         onClick={nextStep}
       >
         <h3
