@@ -28,7 +28,7 @@ function PairingResult() {
         <div className="absolute top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.8)]"></div>
         {/* Pairing result paper  */}
         <img
-          src="/images/pairing_bg.png"
+          src="/images/pairing_bg.jpg"
           className="fixed -top-10 right-1/2 translate-x-1/2 w-[52%] h-auto"
           alt=""
         />
