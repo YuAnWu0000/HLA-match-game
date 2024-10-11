@@ -21,7 +21,7 @@ const GAME_FLOW_COMPONENT_MAPPING = {
 function App() {
   const { money, flow } = useGameStore()
   return (
-    <div className="w-screen h-screen">
+    <div className="w-screen h-screen fixed">
       {GAME_FLOW_COMPONENT_MAPPING[flow]}
       {flow !== 'FAILED' && flow !== 'WIN' && (
         <>

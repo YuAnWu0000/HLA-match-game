@@ -29,7 +29,7 @@ function PairingResult() {
         {/* Pairing result paper  */}
         <img
           src="/images/pairing_bg.png"
-          className="absolute -top-10 right-1/2 translate-x-1/2 w-[52%] h-auto"
+          className="fixed -top-10 right-1/2 translate-x-1/2 w-[52%] h-auto"
           alt=""
         />
         {/* HLA area */}
