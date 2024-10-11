@@ -9,8 +9,8 @@ module.exports = {
     },
     screens: {
       '4k': { min: '2601px', max: '4100px' },
-      '2k': { min: '2000px', max: '2600px' },
-      '2xl': { max: '1999px' },
+      '2k': { min: '1901px', max: '2600px' },
+      '2xl': { max: '1900px' },
       xl: { max: '1279px' },
       lg: { max: '1023px' },
       md: { max: '767px' },

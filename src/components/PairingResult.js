@@ -34,8 +34,9 @@ function PairingResult() {
         />
         {/* HLA area */}
         <div
-          className="relative top-[29%] right-[0.1rem] m-auto w-[46.9%] h-[52.5%] bg-[#dde0e5]
-            border-4 border-[#a1a5af] flex items-start justify-evenly"
+          className="relative top-[25%] right-[0.1rem] m-auto w-[46.9%] h-[34rem] bg-[#dde0e5]
+            border-4 border-[#a1a5af] flex items-start justify-evenly 2xl:top-[20%]
+            2xl:h-[30rem]"
         >
           <div className="w-1/2 flex flex-wrap items-center">
             <h2
@@ -53,7 +54,7 @@ function PairingResult() {
                 className="w-full h-auto"
               />
               <h1
-                className="font-semibold text-primary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
+                className="font-semibold text-primary text-4xl [text-shadow:1px_1px_0px_#BFBFBF]
                   tracking-wide mt-3"
               >
                 {selectedHLAs[0].name}
@@ -67,7 +68,7 @@ function PairingResult() {
                 className="w-full h-auto"
               />
               <h1
-                className="font-semibold text-primary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
+                className="font-semibold text-primary text-4xl [text-shadow:1px_1px_0px_#BFBFBF]
                   tracking-wide mt-3"
               >
                 {selectedHLAs[1].name}
@@ -87,7 +88,7 @@ function PairingResult() {
             <div className="w-1/2 text-center p-3">
               <img src={myHLAs[0].image} alt="" className="w-full h-auto" />
               <h1
-                className="font-semibold text-primary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
+                className="font-semibold text-primary text-4xl [text-shadow:1px_1px_0px_#BFBFBF]
                   tracking-wide mt-3"
               >
                 {myHLAs[0].name}
@@ -97,7 +98,7 @@ function PairingResult() {
             <div className="w-1/2 text-center p-3">
               <img src={myHLAs[1].image} alt="" className="w-full h-auto" />
               <h1
-                className="font-semibold text-primary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
+                className="font-semibold text-primary text-4xl [text-shadow:1px_1px_0px_#BFBFBF]
                   tracking-wide mt-3"
               >
                 {myHLAs[1].name}
