@@ -12,6 +12,7 @@ function PairingResult() {
     checkPairingResult,
     clearPairingResult
   } = useGameStore()
+
   function nextStep() {
     if (checkPairingResult()) {
       setGameFlow('DONATION_COST')

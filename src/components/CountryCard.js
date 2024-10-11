@@ -2,6 +2,8 @@ import PropTypes from 'prop-types'
 import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import useGameStore, { COUNTRY_MAP } from '@/store/game'
+import { getRandomNumber } from '@/utils/random'
+
 function CountryCard({
   order,
   defaultOpen = false,
@@ -15,10 +17,6 @@ function CountryCard({
   const { buddhistLifesRemain, selectedCountryId, setSelectedCountryId } =
     useGameStore()
   // [--delayTime:3s], [--delayTime:3.5s], [--delayTime:4s], [--delayTime:4.5s], [--delayTime:5s],
-
-  function getRandomNumber(range) {
-    return Math.floor(Math.random() * range) + 1
-  }
 
   function cardBackClick() {
     if (selectedCountryId) return
