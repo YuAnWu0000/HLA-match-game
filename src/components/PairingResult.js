@@ -10,7 +10,7 @@ function PairingResult() {
     setShowPairingResult,
     selectedHLAs,
     checkPairingResult,
-    clearSelectedHLAs
+    clearPairingResult
   } = useGameStore()
   function nextStep() {
     if (checkPairingResult()) {
@@ -19,7 +19,7 @@ function PairingResult() {
       if (money > 0) setGameFlow('COUNTRY_SELECTION')
       else setGameFlow('FAILED')
     }
-    clearSelectedHLAs()
+    clearPairingResult()
     setShowPairingResult(false)
   }
   return (

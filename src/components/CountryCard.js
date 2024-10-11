@@ -12,7 +12,8 @@ function CountryCard({
 }) {
   const [isCardOpen, setIsCardOpen] = useState(defaultOpen)
   const [countryId, setCountryId] = useState(defaultId)
-  const { buddhistLifesRemain, setSelectedCountryId } = useGameStore()
+  const { buddhistLifesRemain, selectedCountryId, setSelectedCountryId } =
+    useGameStore()
   // [--delayTime:3s], [--delayTime:3.5s], [--delayTime:4s], [--delayTime:4.5s], [--delayTime:5s],
 
   function getRandomNumber(range) {
@@ -20,6 +21,7 @@ function CountryCard({
   }
 
   function cardBackClick() {
+    if (selectedCountryId) return
     const id = getRandomNumber(5)
     setCountryId(id)
     setSelectedCountryId(id)
@@ -60,7 +62,7 @@ function CountryCard({
           <div
             className="absolute top-0 right-0 w-full h-full [backface-visibility:hidden;]
               [transform:rotate3d(0,1,0,180deg);] rounded-[0.75rem] overflow-hidden"
-            onClick={() => setIsCardOpen(false)}
+            onClick={() => {}}
           >
             {/* Country flag */}
             <img

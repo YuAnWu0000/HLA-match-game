@@ -59,13 +59,14 @@ const useGameStore = create((set, get) => ({
     if (get().selectedHLAs.length === 2) return
     if (hlaData.id === 'death4') {
       get().setShowTimesUp(true)
-      return get().clearSelectedHLAs()
+      return get().clearPairingResult()
     }
     const nowSelectedHLAs = get().selectedHLAs.concat(hlaData)
     set(() => ({ selectedHLAs: nowSelectedHLAs }))
     if (nowSelectedHLAs.length === 2) get().setShowPairingResult(true)
   },
-  clearSelectedHLAs: () => set(() => ({ selectedHLAs: [] })),
+  clearPairingResult: () =>
+    set(() => ({ selectedCountryId: null, selectedHLAs: [] })),
   checkPairingResult: () => {
     const isPairingArr = get().myHLAs.map(
       (my) => !!get().selectedHLAs.find((s) => s.id === my.id)
