@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
 import useGameStore, { COUNTRY_MAP } from '@/store/game'
+import { formatAmount } from '@/utils/format'
 
 function DonationCost() {
   const { selectedCountryId, settleDonationCost } = useGameStore()
@@ -27,8 +28,30 @@ function DonationCost() {
         </h3>
         <p className="font-semibold text-3xl [text-shadow:1px_1px_0px_#BFBFBF] p-2 tracking-widest">
           由於捐贈者是{data.name}人，因此你需要負擔身體健康檢查費用
-          {data.checkUpCost}元以及捐贈費{data.donationCost}元，總計
-          {data.checkUpCost + data.donationCost}元。
+          <span
+            className="[background-clip:text] [text-shadow:initial]
+              bg-[linear-gradient(to_top_right,_#f0f4c3,_#e6ee9c,_#f9fbe7,_#e6ee9c,_#f9fbe7,_#e6ee9c)]
+              text-[1.9rem] text-transparent font-bold"
+          >
+            {formatAmount(data.checkUpCost)}
+          </span>
+          元以及捐贈費
+          <span
+            className="[background-clip:text] [text-shadow:initial]
+              bg-[linear-gradient(to_top_right,_#f0f4c3,_#e6ee9c,_#f9fbe7,_#e6ee9c,_#f9fbe7,_#e6ee9c)]
+              text-[1.9rem] text-transparent font-bold"
+          >
+            {formatAmount(data.donationCost)}
+          </span>
+          元，總計
+          <span
+            className="[background-clip:text] [text-shadow:initial]
+              bg-[linear-gradient(to_top_right,_#f0f4c3,_#e6ee9c,_#f9fbe7,_#e6ee9c,_#f9fbe7,_#e6ee9c)]
+              text-[1.9rem] text-transparent font-bold"
+          >
+            {formatAmount(data.checkUpCost + data.donationCost)}
+          </span>
+          元。
         </p>
       </div>
       {/* Next step */}

@@ -39,12 +39,16 @@ function App() {
               {formatAmount(money)}
             </h3>
           </div>
-          {/* Buddhist lifes */}
-          <BuddhistLifes />
-          {/* Now selected country */}
-          <NowCountry />
-          {/* User's HLA */}
-          <MyHLA />
+          {flow !== 'DONATION_COST' && (
+            <>
+              {/* Buddhist lifes */}
+              <BuddhistLifes />
+              {/* Now selected country */}
+              <NowCountry />
+              {/* User's HLA */}
+              <MyHLA />
+            </>
+          )}
         </>
       )}
       <CountryResult />
