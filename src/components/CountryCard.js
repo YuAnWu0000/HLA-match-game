@@ -6,7 +6,7 @@ function CountryCard({
   order,
   defaultOpen = false,
   defaultId = null,
-  size,
+  size = 'md',
   showResult,
   className
 }) {

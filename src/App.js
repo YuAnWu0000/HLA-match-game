@@ -10,6 +10,7 @@ import NowCountry from '@/components/NowCountry'
 import MyHLA from '@/components/MyHLA'
 import CountryResult from '@/components/CountryResult'
 import PairingResult from '@/components/PairingResult'
+import TimesUp from '@/components/TimesUp'
 
 const GAME_FLOW_COMPONENT_MAPPING = {
   SELF_HLA: <SelfHLA />,
@@ -46,6 +47,7 @@ function App() {
       )}
       <CountryResult />
       <PairingResult />
+      <TimesUp />
     </div>
   )
 }

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import useGameStore from '@/store/game'
 import { twMerge } from 'tailwind-merge'
 
-function HLACard({ order, data, className }) {
-  const [isCardOpen, setIsCardOpen] = useState()
+function HLACard({ order, data, defaultOpen = false, size = 'md', className }) {
+  const [isCardOpen, setIsCardOpen] = useState(defaultOpen)
   const { selectHLA } = useGameStore()
 
   function cardClick() {
@@ -17,7 +17,11 @@ function HLACard({ order, data, className }) {
 
   return (
     <div
-      className={twMerge('w-[12rem] h-[18rem]', className)}
+      className={twMerge(
+        'w-[12rem] h-[18rem]',
+        size === 'xl' && 'w-[20rem] h-[30rem]',
+        className
+      )}
       onClick={cardClick}
     >
       <div
@@ -58,6 +62,8 @@ function HLACard({ order, data, className }) {
 HLACard.propTypes = {
   order: PropTypes.number.isRequired,
   data: PropTypes.object.isRequired,
+  defaultOpen: PropTypes.bool,
+  size: PropTypes.string,
   className: PropTypes.string
 }
 export default HLACard

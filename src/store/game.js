@@ -11,7 +11,7 @@ export const HLA_MAP = {
   r1: { id: 'r1', name: 'HLA - r1', image: '/images/card/hla_r1.png' },
   b2: { id: 'b2', name: 'HLA - b2', image: '/images/card/hla_b2.png' },
   g3: { id: 'g3', name: 'HLA - g3', image: '/images/card/hla_g3.png' },
-  y4: { id: 'y4', name: 'HLA - y4', image: '/images/card/hla_y4.png' },
+  death4: { id: 'death4', name: 'Death', image: '/images/card/4.png' },
   d5: { id: 'd5', name: 'HLA - d5', image: '/images/card/hla_d5.png' },
   p6: { id: 'p6', name: 'HLA - p6', image: '/images/card/hla_p6.png' },
   o7: { id: 'o7', name: 'HLA - o7', image: '/images/card/hla_o7.png' },
@@ -57,6 +57,10 @@ const useGameStore = create((set, get) => ({
   selectedHLAs: [],
   selectHLA: (hlaData) => {
     if (get().selectedHLAs.length === 2) return
+    if (hlaData.id === 'death4') {
+      get().setShowTimesUp(true)
+      return get().clearSelectedHLAs()
+    }
     const nowSelectedHLAs = get().selectedHLAs.concat(hlaData)
     set(() => ({ selectedHLAs: nowSelectedHLAs }))
     if (nowSelectedHLAs.length === 2) get().setShowPairingResult(true)
@@ -68,6 +72,8 @@ const useGameStore = create((set, get) => ({
     )
     const isPairing = isPairingArr.reduce((acc, curr) => acc && curr, true)
     return isPairing
-  }
+  },
+  showTimesUp: false,
+  setShowTimesUp: (isShow) => set(() => ({ showTimesUp: isShow }))
 }))
 export default useGameStore
