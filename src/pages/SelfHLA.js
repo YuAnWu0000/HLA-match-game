@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
-import useGameStore from '@/store/game'
+import useGameStore, { HLA_MAP } from '@/store/game'
 
 function HLASelf() {
   const { setGameFlow } = useGameStore()
@@ -21,30 +21,22 @@ function HLASelf() {
       <div className="relative top-[6rem] flex items-center justify-center gap-8">
         {/* First HLA */}
         <div className="w-[18rem] text-center">
-          <img
-            src={`/images/card/dna_1.png`}
-            alt=""
-            className="w-full h-auto"
-          />
+          <img src={HLA_MAP['r1'].image} alt="" className="w-full h-auto" />
           <h1
             className="font-semibold text-secondary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
               tracking-widest mt-2"
           >
-            HLA - r1
+            {HLA_MAP['r1'].name}
           </h1>
         </div>
         {/* Second HLA */}
         <div className="w-[18rem] text-center">
-          <img
-            src={`/images/card/dna_2.png`}
-            alt=""
-            className="w-full h-auto"
-          />
+          <img src={HLA_MAP['b2'].image} alt="" className="w-full h-auto" />
           <h1
             className="font-semibold text-secondary text-3xl [text-shadow:1px_1px_0px_#BFBFBF]
               tracking-widest mt-2"
           >
-            HLA - b2
+            {HLA_MAP['b2'].name}
           </h1>
         </div>
       </div>
