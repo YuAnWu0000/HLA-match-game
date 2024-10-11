@@ -17,7 +17,7 @@ function TimesUp() {
         className="fixed top-0 right-0 w-full h-full bg-[url('/images/times_up_bg.jpg')] bg-cover
           flex items-center justify-center"
       >
-        <div className="w-full h-full absolute -z-50 bg-[rgba(0,0,0,0.4)]"></div>
+        <div className="w-full h-full absolute -z-50 bg-[rgba(0,0,0,0.3)]"></div>
         {/* Result */}
         <HLACard
           order={1}

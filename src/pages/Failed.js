@@ -7,7 +7,7 @@ function Failed() {
       className="w-full h-full absolute top-0 right-0 bg-[url('/images/failed_bg.jpg')] bg-cover
         flex items-center justify-center"
     >
-      <div className="absolute top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.7)]"></div>
+      <div className="absolute top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.5)]"></div>
       <div className="relative text-center">
         <h1 className="text-[5rem] font-bold text-secondary">
           {failedReason}，遊戲失敗!!
