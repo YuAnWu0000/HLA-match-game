@@ -33,8 +33,8 @@ module.exports = {
             'background-position': 'center 0rem'
           },
           '100%': {
-            'background-size': '140% auto',
-            'background-position': 'center -20rem'
+            'background-size': 'var(--bg-size)',
+            'background-position': 'var(--bg-position)'
           }
         },
         drop: {
@@ -42,7 +42,7 @@ module.exports = {
             transform: 'rotateX(0deg) translateY(-50rem)'
           },
           '100%': {
-            transform: 'rotateX(35deg) translateY(-2rem)'
+            transform: 'var(--card-transform)'
           }
         },
         scale: {
