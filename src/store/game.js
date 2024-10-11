@@ -1,11 +1,41 @@
 import { create } from 'zustand'
 
 export const COUNTRY_MAP = {
-  1: { name: '美國', cost: 50000, image: '/images/card/USA_flag.jpg' },
-  2: { name: '英國', cost: 30000, image: '/images/card/UK_flag.jpg' },
-  3: { name: '日本', cost: 30000, image: '/images/card/JP_flag.jpg' },
-  4: { name: '中國', cost: 30000, image: '/images/card/CN_flag.jpg' },
-  5: { name: '台灣', cost: 10000, image: '/images/card/TW_flag.jpg' }
+  1: {
+    name: '美國',
+    cost: 50000,
+    image: '/images/card/USA_flag.jpg',
+    checkUpCost: 80000,
+    donationCost: 1020000
+  },
+  2: {
+    name: '英國',
+    cost: 30000,
+    image: '/images/card/UK_flag.jpg',
+    checkUpCost: 100000,
+    donationCost: 760000
+  },
+  3: {
+    name: '日本',
+    cost: 30000,
+    image: '/images/card/JP_flag.jpg',
+    checkUpCost: 30000,
+    donationCost: 530000
+  },
+  4: {
+    name: '中國',
+    cost: 30000,
+    image: '/images/card/CN_flag.jpg',
+    checkUpCost: 50000,
+    donationCost: 260000
+  },
+  5: {
+    name: '台灣',
+    cost: 10000,
+    image: '/images/card/TW_flag.jpg',
+    checkUpCost: 20000,
+    donationCost: 90000
+  }
 }
 export const HLA_MAP = {
   r1: { id: 'r1', name: 'HLA - r1', image: '/images/card/hla_r1.png' },
