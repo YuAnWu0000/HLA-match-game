@@ -56,7 +56,7 @@ function PairingResult() {
                 className="w-full h-auto"
               />
               <h1
-                className="font-semibold text-primary text-4xl [text-shadow:1px_1px_0px_#BFBFBF]
+                className="font-semibold text-primary text-[2rem] [text-shadow:1px_1px_0px_#BFBFBF]
                   tracking-wide mt-3"
               >
                 {selectedHLAs[0].name}
@@ -70,7 +70,7 @@ function PairingResult() {
                 className="w-full h-auto"
               />
               <h1
-                className="font-semibold text-primary text-4xl [text-shadow:1px_1px_0px_#BFBFBF]
+                className="font-semibold text-primary text-[2rem] [text-shadow:1px_1px_0px_#BFBFBF]
                   tracking-wide mt-3"
               >
                 {selectedHLAs[1].name}
@@ -90,7 +90,7 @@ function PairingResult() {
             <div className="w-1/2 text-center p-3">
               <img src={myHLAs[0].image} alt="" className="w-full h-auto" />
               <h1
-                className="font-semibold text-primary text-4xl [text-shadow:1px_1px_0px_#BFBFBF]
+                className="font-semibold text-primary text-[2rem] [text-shadow:1px_1px_0px_#BFBFBF]
                   tracking-wide mt-3"
               >
                 {myHLAs[0].name}
@@ -100,7 +100,7 @@ function PairingResult() {
             <div className="w-1/2 text-center p-3">
               <img src={myHLAs[1].image} alt="" className="w-full h-auto" />
               <h1
-                className="font-semibold text-primary text-4xl [text-shadow:1px_1px_0px_#BFBFBF]
+                className="font-semibold text-primary text-[2rem] [text-shadow:1px_1px_0px_#BFBFBF]
                   tracking-wide mt-3"
               >
                 {myHLAs[1].name}

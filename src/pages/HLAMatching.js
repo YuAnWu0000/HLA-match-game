@@ -1,9 +1,35 @@
+import { useEffect, useRef } from 'react'
 import HLACard from '@/components/HLACard'
-import { HLA_MAP } from '@/store/game'
+import useGameStore, { HLA_MAP } from '@/store/game'
 
 function HLAMatching() {
+  const { selectHLA } = useGameStore()
+  const HLAMatchingEl = useRef()
+  useEffect(() => {
+    console.log(HLAMatchingEl)
+    HLAMatchingEl.current.focus()
+  }, [])
   return (
-    <div className="w-full h-full [perspective:1000px;]">
+    <div
+      className="w-full h-full [perspective:1000px;]"
+      ref={HLAMatchingEl}
+      tabIndex="-1"
+      onKeyDown={(e) => {
+        console.log(e)
+        if (e.key === 'Enter') {
+          selectHLA({
+            id: 'r1',
+            name: 'HLA - r1',
+            image: '/images/card/hla_r1.png'
+          })
+          selectHLA({
+            id: 'b2',
+            name: 'HLA - b2',
+            image: '/images/card/hla_b2.png'
+          })
+        }
+      }}
+    >
       {/* Background */}
       <div
         className="absolute top-0 right-0 -z-50 w-full h-full bg-repeat bg-[length:140%_auto]
