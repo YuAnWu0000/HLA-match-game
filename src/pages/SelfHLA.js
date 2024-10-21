@@ -41,7 +41,7 @@ function HLASelf() {
         </div>
       </div>
       {/* Story text */}
-      <div className="w-full h-[12rem] fixed bottom-0 bg-[rgba(255,255,255,0.4)] border border-white">
+      <div className="w-full h-[11rem] fixed bottom-0 bg-[rgba(255,255,255,0.4)] border border-white">
         <h3
           className="w-full h-[4.5rem] leading-[4.5rem] tracking-wide
             bg-[linear-gradient(to_right,_rgba(255,255,255,0.5),_rgba(255,255,255,0.1))]
@@ -55,7 +55,7 @@ function HLASelf() {
       </div>
       {/* Next step */}
       <div
-        className="group absolute right-[1rem] bottom-[1.5rem] flex items-center cursor-pointer
+        className="group absolute right-[0.5rem] bottom-[0.5rem] flex items-center cursor-pointer
           text-[#8d5827] hover:text-indigo-700"
         onClick={() => setGameFlow('COUNTRY_SELECTION')}
       >
