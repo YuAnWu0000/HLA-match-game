@@ -33,11 +33,12 @@ function HLAMatching() {
       {/* Background */}
       <div
         className="absolute top-0 right-0 -z-50 w-full h-full bg-repeat bg-[length:140%_auto]
-          bg-[center_-25rem] 2xl:bg-[center_-20rem] bg-[url('/images/bg_dna.jpg')]"
+          bg-[center_-25rem] 2xl:bg-[length:160%_auto] 2xl:bg-[center_-22rem]
+          bg-[url('/images/bg_dna.jpg')]"
       ></div>
       <div
-        className="relative top-[0rem] w-[70rem] h-[46rem] mx-auto flex justify-center
-          content-center flex-wrap gap-8 [transform-style:preserve-3d;]
+        className="relative top-[0rem] 2xl:top-[3.5rem] w-[70rem] h-[46rem] mx-auto flex
+          justify-center content-center flex-wrap gap-8 [transform-style:preserve-3d;]
           [transform:rotateX(35deg);]"
       >
         {Object.values(HLA_MAP).map((item, index) => (
