@@ -69,7 +69,7 @@ function CountryCard({
             />
             {/* Card frame */}
             <img
-              src={`${process.env.PUBLIC_URL}/images/card/country_card_front.png`}
+              src={`/images/card/country_card_front.png`}
               alt=""
               className="absolute top-0 right-0 w-full h-full"
             />

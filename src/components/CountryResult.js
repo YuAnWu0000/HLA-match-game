@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { ChevronRightIcon } from '@heroicons/react/24/outline'
 import useGameStore, { COUNTRY_MAP } from '@/store/game'
 import CountryCard from '@/components/CountryCard'
@@ -67,8 +66,5 @@ function CountryResult() {
       </div>
     )
   )
-}
-CountryResult.propTypes = {
-  setIsShow: PropTypes.func.isRequired
 }
 export default CountryResult

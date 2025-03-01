@@ -9,11 +9,11 @@ module.exports = function override(config) {
       path: path.resolve(__dirname, 'build'),
       publicPath: '/HLA-match-game/'
     }
-    config.plugins = config.plugins.concat([
-      new webpack.DefinePlugin({
-        'process.env.PUBLIC_URL': JSON.stringify('/HLA-match-game/')
-      })
-    ])
+    // config.plugins = config.plugins.concat([
+    //   new webpack.DefinePlugin({
+    //     'process.env.PUBLIC_URL': JSON.stringify('/HLA-match-game')
+    //   })
+    // ])
   }
   // to make url() in css worked
   config.module.rules
