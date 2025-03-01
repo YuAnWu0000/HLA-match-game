@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/HLA-match-game/main.js",
-    "main.css": "/HLA-match-game/static/css/main.dd32252a.css",
-    "453.js": "/HLA-match-game/453.js",
-    "index.html": "/HLA-match-game/index.html",
-    "main.js.map": "/HLA-match-game/main.js.map",
-    "main.dd32252a.css.map": "/HLA-match-game/static/css/main.dd32252a.css.map",
-    "453.js.map": "/HLA-match-game/453.js.map"
+    "main.js": "./main.js",
+    "main.css": "./static/css/main.dd32252a.css",
+    "453.js": "./453.js",
+    "index.html": "./index.html",
+    "main.js.map": "./main.js.map",
+    "main.dd32252a.css.map": "./static/css/main.dd32252a.css.map",
+    "453.js.map": "./453.js.map"
   },
   "entrypoints": [
     "main.js",
