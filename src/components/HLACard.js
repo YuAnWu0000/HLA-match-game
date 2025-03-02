@@ -52,8 +52,8 @@ function HLACard({
       >
         {/* Card Back */}
         <div
-          className="absolute top-0 right-0 w-full h-full bg-contain
-            bg-[url('/images/card/dna_card_back.png')] [backface-visibility:hidden;]"
+          className={`absolute top-0 right-0 w-full h-full bg-contain bg-dna-card-back
+            [backface-visibility:hidden;]`}
         ></div>
         {/* Card Front */}
         <div
@@ -63,7 +63,7 @@ function HLACard({
         >
           {/* Card frame */}
           <img
-            src="/images/card/dna_card_front.jpg"
+            src="images/card/dna_card_front.jpg"
             alt=""
             className="absolute top-0 right-0 w-full h-full"
           />

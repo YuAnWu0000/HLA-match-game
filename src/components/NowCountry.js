@@ -22,7 +22,7 @@ function NowCountry({ className }) {
             />
             {/* Card frame */}
             <img
-              src="/images/card/country_preview_frame.png"
+              src="images/card/country_preview_frame.png"
               alt=""
               className="absolute top-0 right-0 w-full h-auto"
             />

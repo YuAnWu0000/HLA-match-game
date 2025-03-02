@@ -20,21 +20,20 @@ function HLAMatching() {
           selectHLA({
             id: 'r1',
             name: 'HLA - r1',
-            image: '/images/card/hla_r1.png'
+            image: 'images/card/hla_r1.png'
           })
           selectHLA({
             id: 'b2',
             name: 'HLA - b2',
-            image: '/images/card/hla_b2.png'
+            image: 'images/card/hla_b2.png'
           })
         }
       }}
     >
       {/* Background */}
       <div
-        className="absolute top-0 right-0 -z-50 w-full h-full bg-repeat bg-[length:140%_auto]
-          bg-[center_-25rem] 2xl:bg-[length:160%_auto] 2xl:bg-[center_-22rem]
-          bg-[url('/images/bg_dna.jpg')]"
+        className={`absolute top-0 right-0 -z-50 w-full h-full bg-repeat bg-[length:140%_auto]
+          bg-[center_-25rem] 2xl:bg-[length:160%_auto] 2xl:bg-[center_-22rem] bg-dna-board`}
       ></div>
       <div
         className="relative top-[0rem] 2xl:top-[3.5rem] w-[70rem] h-[46rem] mx-auto flex

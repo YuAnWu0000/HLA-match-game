@@ -7,13 +7,13 @@ function CountrySelection() {
     <div className="w-full h-full [perspective:1000px;] animate-openLight brightness-[0.4]">
       {/* Table background */}
       <div
-        className="absolute top-0 right-0 -z-50 w-full h-full bg-repeat bg-[length:100%_auto]
-          bg-[center_0rem] bg-[url('/images/bg_country.jpg')] animate-bgZoomIn
-          [--bg-size:140%_auto] [--bg-position:center_-20rem] 2xl:[--bg-size:160%_auto]
-          2xl:[--bg-position:center_-15rem]"
+        className={`absolute top-0 right-0 -z-50 w-full h-full bg-repeat bg-[length:100%_auto] //
+          bg-[center_0rem] bg-country-board animate-bgZoomIn [--bg-size:140%_auto]
+          [--bg-position:center_-20rem] 2xl:[--bg-size:160%_auto]
+          2xl:[--bg-position:center_-15rem]`}
       ></div>
       {/* <img
-        src="/images/bg_0.jpg"
+        src="images/bg_0.jpg"
         className="absolute top-0 right-0 -z-50 w-full h-auto [transform-style:preserve-3d;]
           [transform:rotateX(-60deg);]"
         alt=""

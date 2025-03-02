@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const basePath = process.env.NODE_ENV === 'production' ? '/HLA-match-game' : ''
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
@@ -25,6 +26,18 @@ module.exports = {
         warning: '#f97316',
         info: '#575958',
         success: '#4ade80'
+      },
+      backgroundImage: {
+        'hla-self': `url('${basePath}/images/hla_self.jpg')`,
+        'buddhist-logo': `url('${basePath}/images/buddhist_logo.png')`,
+        'country-board': `url('${basePath}/images/bg_country.jpg')`,
+        'country-card-back': `url('${basePath}/images/card/country_card_back.png')`,
+        'dna-board': `url('${basePath}/images/bg_dna.jpg')`,
+        'dna-card-back': `url('${basePath}/images/card/dna_card_back.png')`,
+        'check-up': `url('${basePath}/images/check_up.jpg')`,
+        'times-up': `url('${basePath}/images/times_up_bg.png')`,
+        win: `url('${basePath}/images/win_bg.jpg')`,
+        failed: `url('${basePath}/images/failed_bg.jpg')`
       },
       keyframes: {
         zoomIn: {

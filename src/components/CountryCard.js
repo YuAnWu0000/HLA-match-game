@@ -50,8 +50,8 @@ function CountryCard({
       >
         {/* Card Back */}
         <div
-          className="absolute top-0 right-0 w-full h-full bg-contain
-            bg-[url('/images/card/country_card_back.png')] [backface-visibility:hidden;]"
+          className={`absolute top-0 right-0 w-full h-full bg-contain bg-country-card-back
+            [backface-visibility:hidden;]`}
           onClick={cardBackClick}
         ></div>
         {/* Card Front */}
@@ -69,7 +69,7 @@ function CountryCard({
             />
             {/* Card frame */}
             <img
-              src={`/images/card/country_card_front.png`}
+              src={`images/card/country_card_front.png`}
               alt=""
               className="absolute top-0 right-0 w-full h-full"
             />

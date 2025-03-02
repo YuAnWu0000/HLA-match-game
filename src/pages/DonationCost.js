@@ -14,8 +14,8 @@ function DonationCost() {
 
   return (
     <div
-      className="fixed top-0 right-0 w-full h-full bg-[url('/images/check_up.jpg')] bg-cover flex
-        items-center justify-center"
+      className={`fixed top-0 right-0 w-full h-full bg-check-up bg-cover flex items-center
+        justify-center`}
     >
       <div className="absolute top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.5)]"></div>
       {/* Story text */}

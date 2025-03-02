@@ -7,8 +7,8 @@ function HLASelf() {
     <div className="w-full h-full">
       {/* Background */}
       <div
-        className="absolute top-0 right-0 -z-50 w-full h-full bg-no-repeat bg-contain
-          bg-[center_-7rem] bg-[url('/images/hla_self.jpg')]"
+        className={`absolute top-0 right-0 -z-50 w-full h-full bg-no-repeat bg-contain
+          bg-[center_-7rem] bg-hla-self`}
       ></div>
       <div className="absolute top-0 right-0 w-full h-full bg-[rgba(0,0,0,0.7)] -z-40"></div>
       <h1

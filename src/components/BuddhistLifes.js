@@ -12,7 +12,7 @@ function BuddhistLifes() {
         <div
           key={`buddhist${item}`}
           className={twMerge(
-            "w-16 h-12 bg-[url('/images/buddhist_logo.png')] bg-cover",
+            'w-16 h-12 bg-cover bg-buddhist-logo',
             item > buddhistLifesRemain && 'brightness-50'
           )}
         ></div>
