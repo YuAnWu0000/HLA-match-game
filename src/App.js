@@ -12,6 +12,7 @@ import MyHLA from '@/components/MyHLA'
 import CountryResult from '@/components/CountryResult'
 import PairingResult from '@/components/PairingResult'
 import TimesUp from '@/components/TimesUp'
+import Preloader from '@/components/Preloader'
 
 const GAME_FLOW_COMPONENT_MAPPING = {
   SELF_HLA: <SelfHLA />,
@@ -25,6 +26,7 @@ function App() {
   const { money, flow } = useGameStore()
   return (
     <div className="w-screen h-screen fixed">
+      <Preloader />
       {GAME_FLOW_COMPONENT_MAPPING[flow]}
       {flow !== 'FAILED' && flow !== 'WIN' && (
         <>
