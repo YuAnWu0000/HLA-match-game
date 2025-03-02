@@ -87,13 +87,22 @@ const useGameStore = create((set, get) => ({
   selectedHLAs: [],
   selectHLA: (hlaData) => {
     if (get().selectedHLAs.length === 2) return
+    // 時候已到
     if (hlaData.id === 'death4') {
-      get().setShowTimesUp(true)
-      return get().clearPairingResult()
+      setTimeout(() => {
+        // 等翻完牌後才出現時候已到
+        get().setShowTimesUp(true)
+        get().clearPairingResult()
+      }, 500)
+    } else {
+      const nowSelectedHLAs = get().selectedHLAs.concat(hlaData)
+      set(() => ({ selectedHLAs: nowSelectedHLAs }))
+      if (nowSelectedHLAs.length === 2)
+        setTimeout(() => {
+          // 等翻完牌後才出現配對結果
+          get().setShowPairingResult(true)
+        }, 500)
     }
-    const nowSelectedHLAs = get().selectedHLAs.concat(hlaData)
-    set(() => ({ selectedHLAs: nowSelectedHLAs }))
-    if (nowSelectedHLAs.length === 2) get().setShowPairingResult(true)
   },
   clearPairingResult: () =>
     set(() => ({ selectedCountryId: null, selectedHLAs: [] })),

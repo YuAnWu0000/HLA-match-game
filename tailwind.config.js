@@ -35,7 +35,7 @@ module.exports = {
         'dna-board': `url('${basePath}/images/bg_dna.jpg')`,
         'dna-card-back': `url('${basePath}/images/card/dna_card_back.png')`,
         'check-up': `url('${basePath}/images/check_up.jpg')`,
-        'times-up': `url('${basePath}/images/times_up_bg.png')`,
+        'times-up': `url('${basePath}/images/times_up_bg.jpg')`,
         win: `url('${basePath}/images/win_bg.jpg')`,
         failed: `url('${basePath}/images/failed_bg.jpg')`
       },

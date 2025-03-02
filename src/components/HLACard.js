@@ -34,9 +34,7 @@ function HLACard({
     //     : Object.values(HLA_MAP)[1]
     setCardData(chosenCard)
     setIsCardOpen(true)
-    setTimeout(() => {
-      selectHLA(chosenCard)
-    }, 500)
+    selectHLA(chosenCard)
   }
 
   return (
