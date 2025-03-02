@@ -24,12 +24,18 @@ function HLACard({
         : Object.values(HLA_MAP).filter(
             (item) => item.id !== selectedHLAs[0].id
           )
-    console.log('pool: ', pool)
-    console.log('result: ', pool[num - 1])
-    setCardData(pool[num - 1])
+    // console.log('pool: ', pool)
+    // console.log('result: ', pool[num - 1])
+    const chosenCard = pool[num - 1]
+    // 必中
+    // const chosenCard =
+    //   selectedHLAs.length === 0
+    //     ? Object.values(HLA_MAP)[0]
+    //     : Object.values(HLA_MAP)[1]
+    setCardData(chosenCard)
     setIsCardOpen(true)
     setTimeout(() => {
-      selectHLA(pool[num - 1])
+      selectHLA(chosenCard)
     }, 500)
   }
 
