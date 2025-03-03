@@ -26,12 +26,12 @@ function HLACard({
           )
     // console.log('pool: ', pool)
     // console.log('result: ', pool[num - 1])
-    // const chosenCard = pool[num - 1]
+    const chosenCard = pool[num - 1]
     // 必中
-    const chosenCard =
-      selectedHLAs.length === 0
-        ? Object.values(HLA_MAP)[0]
-        : Object.values(HLA_MAP)[1]
+    // const chosenCard =
+    //   selectedHLAs.length === 0
+    //     ? Object.values(HLA_MAP)[0]
+    //     : Object.values(HLA_MAP)[1]
     setCardData(chosenCard)
     setIsCardOpen(true)
     selectHLA(chosenCard)
