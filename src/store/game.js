@@ -122,6 +122,20 @@ const useGameStore = create((set, get) => ({
     const donationCost = COUNTRY_MAP[get().selectedCountryId].donationCost
     if (get().money >= checkCost + donationCost) get().setGameFlow('WIN')
     else get().setGameFlow('FAILED')
+  },
+  restart: () => {
+    return set(() => ({
+      money: 1000000,
+      flow: 'SELF_HLA',
+      buddhistLifesRemain: 5,
+      myHLAs: [
+        { id: 'r1', name: 'HLA - r1', image: 'images/card/hla_r1.png' },
+        { id: 'b2', name: 'HLA - b2', image: 'images/card/hla_b2.png' }
+      ],
+      roundCount: 0,
+      selectedCountryId: null,
+      selectedHLAs: []
+    }))
   }
 }))
 export default useGameStore

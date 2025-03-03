@@ -2,15 +2,15 @@ import PropTypes from 'prop-types'
 import { twMerge } from 'tailwind-merge'
 
 const Button = ({ children, variant, size, className, onClick }) => {
-  const defaultStyles =
-    'w-[120px] h-[30px] text-base font-medium text-white bg-black border border-solid'
+  const defaultStyles = 'w-[120px] h-[30px] font-medium shadow-xl'
   const variantStyles = {
-    primary: 'bg-green-500 font-medium border-white rounded-lg',
-    warning: 'bg-orange-500 font-medium border-white rounded-lg',
-    error: 'bg-red-500 font-medium border-white rounded-lg'
+    primary:
+      'bg-[#fafafa] text-primary text-base font-medium rounded-lg hover:bg-gray-300',
+    warning: 'bg-orange-500 font-medium rounded-lg',
+    error: 'bg-red-500 font-medium rounded-lg'
   }
   const sizeStyles = {
-    lg: 'w-[200px] h-[50px] text-lg',
+    lg: 'w-[250px] h-[80px] text-3xl font-bold',
     sm: 'w-[100px] h-[20px] text-sm'
   }
   // const disableStyles = 'bg-gray-500 pointer-events-none'
