@@ -15,7 +15,7 @@ function MyHLA({ className }) {
           <div className="w-[7rem] text-center">
             <img src={myHLAs[0].image} alt="" className="w-full h-auto" />
             <h1
-              className="font-semibold text-secondary text-xl [text-shadow:1px_1px_0px_#BFBFBF]
+              className="font-semibold text-secondary text-xl [text-shadow:1px_1px_0px_black]
                 tracking-wide mt-2"
             >
               {myHLAs[0].name}
@@ -25,7 +25,7 @@ function MyHLA({ className }) {
           <div className="w-[7rem] text-center">
             <img src={myHLAs[1].image} alt="" className="w-full h-auto" />
             <h1
-              className="font-semibold text-secondary text-xl [text-shadow:1px_1px_0px_#BFBFBF]
+              className="font-semibold text-secondary text-xl [text-shadow:1px_1px_0px_black]
                 tracking-wide mt-2"
             >
               {myHLAs[1].name}
