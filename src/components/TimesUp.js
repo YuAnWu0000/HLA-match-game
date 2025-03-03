@@ -25,7 +25,10 @@ function TimesUp() {
           size="xl"
           className="transform-none animate-none"
         />
-        <h1 className="absolute bottom-[5%] text-secondary font-bold text-[2.3rem]">
+        <h1
+          className="absolute bottom-[5%] text-secondary font-bold text-[2.3rem]
+            [text-shadow:1px_1px_black,2px_2px_5px_black]"
+        >
           病情急遽惡化，你的時候已到...
         </h1>
         {/* Next step */}
